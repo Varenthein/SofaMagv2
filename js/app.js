@@ -1,5 +1,5 @@
 const container = document.querySelector('.content'); //get magazine container
-
+console.log('Ttest');
 /* A few helping functions */
 
 
@@ -17,7 +17,7 @@ function loadFile(file_name, file_type) {
         document.head.appendChild(file);
     }
 }
-console.log('Ttest');
+
 //A little hack for creating window.$_GET helper ;)
 window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{}); //get data from $_GET
 
