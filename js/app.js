@@ -37,9 +37,10 @@ function loadFile(file_name, file_type) {
 
 function createPages(pages) {
 
+  console.log(issue.cover);
   //create front page
   let front_page = document.createElement('article'); //create "page" for 404 not found
-  front_page.className = "fron_page"; //add class not_found for css styling
+  front_page.className = "front_page"; //add class not_found for css styling
   front_page.innerHTML = `<img src="${issue.cover}" alt="cover" class="cover">`; //add error message
   container.appendChild(front_page);
 
