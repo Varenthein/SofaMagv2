@@ -1,5 +1,5 @@
 const container = document.querySelector('.content'); //get magazine container
-console.log('Ttest');
+
 /* A few helping functions */
 
 
@@ -21,15 +21,15 @@ function loadFile(file_name, file_type) {
 //A little hack for creating window.$_GET helper ;)
 window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{}); //get data from $_GET
 
-if(window.$_GET['id'] == "undefined") { //if id isn't specified
+if(window.$_GET['id'] === undefined) { //if id isn't specified
 
    let errorPage = document.createElement('article'); //create "page" for 404 not found
    errorPage.className = "not_found"; //add class not_found for css styling
    errorPage.innerHTML = "<h1>404 not found...</h1>"; //add error message
-   document.querySelector('content').appendChild(errorPage); //append new page to .content
+   document.querySelector('.content').appendChild(errorPage); //append new page to .content
 
 } else {
-
+  
   /*issue = data.filter(item => item.id == $_GET['id'] );
   if(issue.length < 1) document.querySelector('body').innerHTML = "<p>There is no such file...</p>"; //if there is no book with such id
   else {
