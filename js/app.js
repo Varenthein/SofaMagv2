@@ -39,9 +39,12 @@ function createPages(pages) {
 
   console.log(issue.cover);
   //create front page
-  let front_page = document.createElement('article'); //create "page" for 404 not found
-  front_page.className = "front_page"; //add class not_found for css styling
-  front_page.innerHTML = `<img src="${issue.cover}" alt="cover" class="cover">`; //add error message
+  let front_page = document.createElement('article'); //create "page"
+  front_page.className = "front_page"; //add class
+  front_page.innerHTML = `
+    <img src="${issue.cover}" alt="cover" class="cover">
+    <button>Start reading!</button>
+  `;
   container.appendChild(front_page);
 
   container.innerHTML += pages.map((item) => { //loop every page
@@ -57,6 +60,15 @@ function createPages(pages) {
 
 }
 
+function errorPage(message) {
+
+  let errorPage = document.createElement('article'); //create "page" for 404 not found
+  errorPage.className = "not_found"; //add class not_found for css styling
+  errorPage.innerHTML = `<h1>${message}</h1>`; //add error message
+  document.querySelector('.content').appendChild(errorPage); //append new page to .content
+
+}
+
 /* HELPING FUNCTIONS END */
 
 //A little hack for creating window.$_GET helper ;)
@@ -64,20 +76,15 @@ window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURICo
 
 if(window.$_GET['id'] === undefined) { //if id isn't specified
 
-   let errorPage = document.createElement('article'); //create "page" for 404 not found
-   errorPage.className = "not_found"; //add class not_found for css styling
-   errorPage.innerHTML = "<h1>404 not found...</h1>"; //add error message
-   document.querySelector('.content').appendChild(errorPage); //append new page to .content
+   errorPage("404 not found...");
+
 
 } else {
 
   issue = data.filter(item => item.id == window.$_GET['id']); //get issue with speicified id from data array
   if(issue.length < 1) { //if issue with such id doesnt exist
 
-    let errorPage = document.createElement('article'); //create "page" for 404 not found
-    errorPage.className = "not_found"; //add class not_found for css styling
-    errorPage.innerHTML = "<h1>There is no such issue in the database...</h1>"; //add error message
-    document.querySelector('.content').appendChild(errorPage); //append new page to .content
+    errorPage("There is no such issue in the database..."); //add error message
 
   }
   else {
@@ -93,10 +100,7 @@ if(window.$_GET['id'] === undefined) { //if id isn't specified
 
           }, function(err) {
               console.error(err); // error while loading the file
-              let errorPage = document.createElement('article'); //create "page" for 404 not found
-              errorPage.className = "not_found"; //add class not_found for css styling
-              errorPage.innerHTML = "<h1>Pages file not found...</h1>"; //add error message
-              document.querySelector('.content').appendChild(errorPage); //append new page to .content
+              errorPage("Pages file not found..."); //add error message
           });
 
       }, function(err) {
