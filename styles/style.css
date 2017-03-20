@@ -15,6 +15,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: black;
 }
 
+/* Content */
+
 .content {
   display: flex;
   flex-wrap: no-wrap;
@@ -29,7 +31,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   min-height: 100vh;
   width: 100vw;
+  flex: none;
 }
+
+/* NOT FOUND Styling */
 
 .content article.not_found {
   display: flex;
@@ -40,4 +45,18 @@ h1, h2, h3, h4, h5, h6 {
 .content article.not_found h1 {
   font-size: 6em;
   font-weight: bold;
+}
+
+/* FRONT PAGE styling */
+
+.content article.front_page {
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content article.front_page img {
+  margin: 0 auto;
+  height: 90vh;
+  width: auto;
 }
