@@ -47,6 +47,18 @@ function createPages(pages) {
   `;
   container.appendChild(front_page);
 
+  //add event listener for play button
+
+  document.body.scrollLeft = document.body.clientWidth;
+  console.log(document.body.clientWidth, document.body.scrollLeft);
+  item = document.querySelector('.front_page button');
+  item.addEventListener('click', function(){ alert('test');});
+
+  //() => {
+    // document.body.scrollLeft = document.body.clientWidth;
+     //console.log('test');
+  //});
+
   container.innerHTML += pages.map((item) => { //loop every page
 
      //create new page
@@ -74,6 +86,8 @@ function errorPage(message) {
 //A little hack for creating window.$_GET helper ;)
 window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{}); //get data from $_GET
 
+
+/* Loading magazine */
 if(window.$_GET['id'] === undefined) { //if id isn't specified
 
    errorPage("404 not found...");
@@ -116,3 +130,5 @@ if(window.$_GET['id'] === undefined) { //if id isn't specified
 
   }
 }
+
+/* end of loading magazine */
