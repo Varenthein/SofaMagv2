@@ -62,8 +62,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: .2s;
 }
 .content article.front_page button {
-  background:rgba(0,0,0,0.7);
-  border: 1px solid #fff;
+  background:rgba(0,0,0,0.8);
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
   cursor:pointer;
   color: #fff;
   opacity: 0.7;

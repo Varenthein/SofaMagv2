@@ -43,7 +43,7 @@ function createPages(pages) {
   front_page.className = "front_page"; //add class
   front_page.innerHTML = `
     <img src="${issue.cover}" alt="cover" class="cover">
-    <button>Start reading!</button>
+    <button><span class="fa fa-play" aria-hidden="true"></span></button>
   `;
   container.appendChild(front_page);
 
