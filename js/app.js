@@ -33,11 +33,32 @@ function loadFile(file_name, file_type) {
     }
 }
 
+Element.prototype.scrollTo = function(to,speed) {
+  if(this.scrollLeft < to) {
+    this.scrollLeft += 1;
+    console.log(this.scrollLeft);
+    setTimeout(function() { this.scrollTo(to,speed)}, speed);
+  }
+}
+
+function animate(property,to,i) {
+  if(property < to) {
+    property += i;
+    document.body.scrollLeft = property;
+    console.log(property);
+    setTimeout(function() { animate(property,to,i++)}, 1);
+  }
+}
+
+function test() {
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  document.body.scrollTo(w, 100);
+}
 //generate html structure
 
 function createPages(pages) {
 
-  console.log(issue.cover);
   //create front page
   let front_page = document.createElement('article'); //create "page"
   front_page.className = "front_page"; //add class
@@ -45,19 +66,8 @@ function createPages(pages) {
     <img src="${issue.cover}" alt="cover" class="cover">
     <button><span class="fa fa-play" aria-hidden="true"></span></button>
   `;
+
   container.appendChild(front_page);
-
-  //add event listener for play button
-
-  document.body.scrollLeft = document.body.clientWidth;
-  console.log(document.body.clientWidth, document.body.scrollLeft);
-  item = document.querySelector('.front_page button');
-  item.addEventListener('click', function(){ alert('test');});
-
-  //() => {
-    // document.body.scrollLeft = document.body.clientWidth;
-     //console.log('test');
-  //});
 
   container.innerHTML += pages.map((item) => { //loop every page
 
@@ -69,6 +79,9 @@ function createPages(pages) {
      `;
 
   }).join('');
+
+//plug play action to "play" button
+ container.querySelector(".front_page button").addEventListener("click",test,false);
 
 }
 
