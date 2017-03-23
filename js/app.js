@@ -3,7 +3,6 @@ let issue = ""; //global issue variable
 
 /* A few helping functions */
 
-
 //Adding files function
 function loadFile(file_name, file_type) {
     if (file_type=="js"){ //if filename is a external JavaScript file
@@ -33,28 +32,25 @@ function loadFile(file_name, file_type) {
     }
 }
 
+//scrollTo prototype
 Element.prototype.scrollTo = function(to,speed) {
-  if(this.scrollLeft < to) {
-    this.scrollLeft += 1;
-    console.log(this.scrollLeft);
-    setTimeout(function() { this.scrollTo(to,speed)}, speed);
-  }
+
+ let el = this;
+
+ (function move() { if((el.scrollLeft+=10)<=to) {
+   setTimeout(move,speed);
+   console.log(el.scrollLeft);
+ }
+ })();
+
 }
 
-function animate(property,to,i) {
-  if(property < to) {
-    property += i;
-    document.body.scrollLeft = property;
-    console.log(property);
-    setTimeout(function() { animate(property,to,i++)}, 1);
-  }
+//scrollToPage
+function scrollToPage(page = 0) {
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) * page;
+  document.body.scrollTo(w, 1);
 }
 
-function test() {
-  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  document.body.scrollTo(w, 100);
-}
 //generate html structure
 
 function createPages(pages) {
@@ -81,7 +77,13 @@ function createPages(pages) {
   }).join('');
 
 //plug play action to "play" button
- container.querySelector(".front_page button").addEventListener("click",test,false);
+ container.querySelector(".front_page button").addEventListener("click", function() { scrollToPage(1) },false);
+
+ //scrollTop
+
+ document.body.scrollLeft = 0;
+ document.body.scrollTop = 0;
+
 
 }
 
