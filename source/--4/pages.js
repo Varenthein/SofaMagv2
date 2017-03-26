@@ -1,6 +1,4 @@
 let pages = [
-    { "page": "0", "content": new title_page().get()},
-    { "page": "1", "content": "" },
     { "page": "2", "content": new image('2.png').get()},
     { "page": "3", "content": new fullpage(3,"Valbuena: L'art de la chute","Piłka nożna","valbuena.jpg",["#Francja", "#Ligue1"],"fot: Вячеслав Евдокимов").get()},
     { "page": "4", "content": new fulltext(4,`
