@@ -55,6 +55,7 @@ function scrollToPage(page = 0) {
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) * page;
   //document.body.scrollTo(w, 1);
   window.scrollIt(w, 1);
+  document.querySelector(`.content article:nth-of-type(${page+1})`).style.display = "block";
 }
 
 //generate html structure
