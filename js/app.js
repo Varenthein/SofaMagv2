@@ -33,13 +33,15 @@ function loadFile(file_name, file_type) {
 }
 
 //scrollTo prototype
-Element.prototype.scrollTo = function(to,speed) {
+Window.prototype.scrollIt = function(to,speed) {
 
  let el = this;
+ el.scroll(0,0);
+ el.pageXOffset = 0;
 
- (function move() { if((el.scrollLeft+=10)<=to) {
+ (function move() { if((el.pageXOffset+=20)<=to) {
+   el.scroll(el.pageXOffset,0);
    setTimeout(move,speed);
-   console.log(el.scrollLeft);
  }
  })();
 
@@ -48,7 +50,8 @@ Element.prototype.scrollTo = function(to,speed) {
 //scrollToPage
 function scrollToPage(page = 0) {
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) * page;
-  document.body.scrollTo(w, 1);
+  //document.body.scrollTo(w, 1);
+  window.scrollIt(w, 1);
 }
 
 //generate html structure
@@ -77,7 +80,7 @@ function createPages(pages) {
   }).join('');
 
 //plug play action to "play" button
- container.querySelector(".front_page button").addEventListener("click", function() { scrollToPage(1) },false);
+ container.querySelector(".front_page button").addEventListener("click", function() { scrollToPage(1); },false);
 
  //scrollTop
 
