@@ -36,9 +36,12 @@ function loadFile(file_name, file_type) {
 Window.prototype.scrollIt = function(to,speed) {
 
  let el = this;
+
+ /* scroll it to default position */
  el.scroll(0,0);
  el.pageXOffset = 0;
 
+ /* animate scrolling */
  (function move() { if((el.pageXOffset+=20)<=to) {
    el.scroll(el.pageXOffset,0);
    setTimeout(move,speed);
@@ -72,7 +75,7 @@ function createPages(pages) {
 
      //create new page
      return `
-     <article>
+     <article style="display: none">
         ${item.content}
      </article>
      `;
