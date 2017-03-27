@@ -8,7 +8,7 @@ body {
   color: #5d6063;
   font-family: Open Sans;
   font-size: 20px;
-  overflow: hidden; /* hide scroll */
+  overflow-x: hidden; /* hide scroll */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,6 +33,14 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   width: 100vw;
   flex: none;
+}
+
+.content article.page {  display: none; }
+
+.content article.page.active {
+  display: block;
+  animation-name: fadein;
+  animation-duration: 4s;
 }
 
 /* NOT FOUND Styling */
@@ -80,4 +88,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 .content article.front_page button:hover {
   opacity: 1;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
