@@ -8,6 +8,7 @@ body {
   color: #5d6063;
   font-family: Open Sans;
   font-size: 20px;
+  overflow: hidden; /* hide scroll */
 }
 
 h1, h2, h3, h4, h5, h6 {
