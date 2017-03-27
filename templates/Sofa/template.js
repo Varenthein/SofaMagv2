@@ -1,5 +1,30 @@
 /* Sofa template */
 
+const page = function(title = "Untitled", author = "Unknown", category = "No category", main_image = "", tags = [], license, excerpt, text) {
+
+  let title_len = title.length;
+  let title_size = 120-title.length+'px';
+  if(parseInt(title_size) < 20) title_size = "38px";
+
+  this.get = () => {
+  return `
+  <header style="background:url('${issue.url}/img/${main_image}');background-size:cover;background-position:center center;">
+    <div class="fog"></div>
+    <div class="cat"><span class="romb"></span>${category}</div>
+    <h1 style="font-size:${title_size}">${title}</h1>
+    <span class="author">Autor: ${author}</span>
+    <div class="tags"><span class="license">${license}</span><stong>Tagi: </strong> ${tags.join(", ")}</div>
+  </header>
+  <div class="text">
+      <p><strong>${excerpt}</strong></p>
+      ${text}
+  </div>
+  `;
+ }
+}
+
+
+
 const title_page = function() {
   this.img = "";
   this.get = () => `<img src='${issue.url}/img/cover.png' style='width:100%' alt="">`;
@@ -10,7 +35,7 @@ const image = function(img) {
   this.get = () => `<img src='${issue.url}/img/${img}' style='width:100%' alt="">`;
 }
 
-const page = function(page_nr = 0, text = "Empty", excerpt = "", type = "content", title = "Untitled", author = "Unknown", category = "No category", main_image = "", tags = [], license) {
+/*const page = function(page_nr = 0, text = "Empty", excerpt = "", type = "content", title = "Untitled", author = "Unknown", category = "No category", main_image = "", tags = [], license) {
   this.text = text;
   this.excerpt = excerpt;
   this.type = type;
@@ -53,7 +78,7 @@ const page = function(page_nr = 0, text = "Empty", excerpt = "", type = "content
     `; }
 }
 }
-
+*/
 const fullpage = function(page_nr = 0, title = "Untitled", category = "No category", main_image = "", tags = [], license) {
   this.title = title;
   this.category = category;
@@ -67,7 +92,7 @@ const fullpage = function(page_nr = 0, title = "Untitled", category = "No catego
 
     return `
     <span class="nr"><strong>${page_nr}</strong></span>
-    <header style="background:url('${issue.url}/img/${this.main_image}');background-size:cover;background-position:center center;height:100%">
+    <header style="background:url('${issue.url}/img/${this.main_image}');background-size:cover;background-position:center center;">
       <div class="cat"><span class="romb"></span>${this.category}</div>
       <h1 style="font-size:${title_size}">${this.title}</h1>
       <div class="tags"><span class="license">${this.license}</span>${this.tags.join(", ")}</div>
