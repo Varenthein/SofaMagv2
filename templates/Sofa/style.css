@@ -100,6 +100,102 @@
   font-size: 21px;
 }
 
+/* SOCIAL */
+
+.social {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -500px; /*half the width*/
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.social ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.social ul li a {
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+   border-radius:50%;
+   text-align:center;
+   width: 50px;
+   height: 50px;
+   font-size:20px;
+   line-height:50px;
+   color: #fff;
+  color: #d3d3d3;
+  border: #d3d3d3;
+  display: block;
+  margin-top: 5px;
+  opacity: 1;
+}
+
+.social ul li i {
+}
+
+.social li a:hover  {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+   opacity: 1;
+}
+
+.social a.icoRss:hover {
+	color: #BD3518;
+}
+.social a.icoFacebook:hover {
+	color:#3B5998;
+}
+.social a.icoTwitter:hover {
+	color:#33ccff;
+}
+.social a.icoGoogle:hover {
+	color:#BD3518;
+}
+.social a.icoVimeo:hover {
+	color:#0590B8;
+}
+.social a.icoBookmark:hover {
+	color:#007bb7;
+}
+
+
+/* IMAGES */
+
+figure {
+  width: 100%;
+  text-align:center;
+  padding: 20px 50px;
+  margin: 10px auto;
+}
+
+figure img {
+  width: 100%
+}
+
+figure figcaption {
+  width: 80%;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px auto;
+}
+figure figcaption span {
+  display: block;
+  font-size: 10px;
+  margin-top: 5px;
+  color: #222;
+}
 
 /* ADDITIONAL ELEMENTS */
 .romb {

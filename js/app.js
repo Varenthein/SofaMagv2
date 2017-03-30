@@ -1,62 +1,31 @@
-const container = document.querySelector('.content'); //get magazine container
+const container = $('.content'); //get magazine container
 let issue = ""; //global issue variable
+presentPage = 0; //present page
 
-/* A few helping functions */
-
-//Adding files function
-function loadFile(file_name, file_type) {
-    if (file_type=="js"){ //if filename is a external JavaScript file
-
-        let promise = new Promise(function(resolve, reject) {
-
-          let file=document.createElement('script');
-          file.setAttribute("src", file_name);
-          document.head.appendChild(file);
-
-          file.addEventListener('load', function() {
-              resolve(file);
-          }, false);
-
-          file.addEventListener('file', function() {
-              reject("Something went wrong. The file couldn't be loaded! Check the url");
-          }, false);
-        });
-
-        return promise;
-    }
-    else if (file_type=="css"){ //if filename is an external CSS file
-        var file=document.createElement("link")
-        file.setAttribute("rel", "stylesheet")
-        file.setAttribute("href", file_name)
-        document.head.appendChild(file);
-    }
+const config = {
+  "social": false,
+  "text_at": window.innerHeight,
 }
 
-//scrollTo prototype
-Window.prototype.scrollIt = function(to,speed) {
 
- let el = this;
+function setNavTo(page) {
 
- /* scroll it to default position */
- el.scroll(0,0);
- el.pageXOffset = 0;
-
- /* animate scrolling */
- (function move() { if((el.pageXOffset+=20)<=to) {
-   el.scroll(el.pageXOffset,0);
-   setTimeout(move,speed);
- }
- })();
+  $('nav h2').innerText = pages[page-1].title;
+  $('nav a:first-of-type').innerHTML = (pages[page-2] != undefined) ? pages[page-2].title : 'Główna';
+  $('nav a:first-of-type').href = `javascript:scrollToPage(${page-1})`;
+  $('nav a:last-of-type').innerHTML = (pages[page] != undefined) ? pages[page].title : 'Koniec';
+  $('nav a:last-of-type').href = (page+1 <= pages.length) ? `javascript:scrollToPage(${page+1})` : 'javascript:scrollToPage(0)';
 
 }
 
 //scrollToPage
 function scrollToPage(page = 0) {
+  presentPage = page;
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) * page;
-  //document.body.scrollTo(w, 1);
   window.scrollIt(w, 1);
-  console.log(page);
-  document.querySelector(`.content article:nth-of-type(${page+1})`).classList.add("active");
+  $All('.content .page').forEach((item) => item.classList.remove('active'));
+  if(page <= pages.length) $(`.content article:nth-of-type(${page+1})`).classList.add("active");
+  if(page > 0) setNavTo(page);
 }
 
 //generate html structure
@@ -85,13 +54,35 @@ function createPages(pages) {
   }).join('');
 
 //plug play action to "play" button
- container.querySelector(".front_page button").addEventListener("click", function() { scrollToPage(1); },false);
+ $(".front_page button").addEventListener("click", function() { scrollToPage(1); },false);
 
- //scrollTop
+ /* create navigaton */
 
- document.body.scrollLeft = 0;
- document.body.scrollTop = 0;
+let nav = document.createElement('nav');
+nav.innerHTML = `
+<a class="go-left">None</a>
+<h2>Unnamed</h2>
+<a class="go-right">None</a>
+`
+document.body.appendChild(nav);
 
+setTimeout(function() {
+  window.scroll(0,0);
+}, 100)
+
+let social = document.createElement('div');
+social.className = "social";
+social.style.display = "none";
+social.innerHTML = `
+    <h6>Share</h6>
+    <ul>
+          <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-heart"></i></a></li>
+          <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#" class="icoBookmark" title="Linkedin"><i class="fa fa-bookmark-o"></i></a></li>
+    </ul>`;
+  document.body.appendChild(social);
 
 }
 
@@ -100,15 +91,27 @@ function errorPage(message) {
   let errorPage = document.createElement('article'); //create "page" for 404 not found
   errorPage.className = "not_found"; //add class not_found for css styling
   errorPage.innerHTML = `<h1>${message}</h1>`; //add error message
-  document.querySelector('.content').appendChild(errorPage); //append new page to .content
+  $('.content').appendChild(errorPage); //append new page to .content
 
 }
 
-/* HELPING FUNCTIONS END */
+/* Scroll events */
 
-//A little hack for creating window.$_GET helper ;)
-window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{}); //get data from $_GET
+function checkScroll() {
+    if((window.scrollY > config.text_at && $('.social').style.display == "none") || (window.scrollY > config.text_at && config.social == false)) {
+        if(config.social == true)$('.social').fadeIn();
+        $('nav').classList.add('scrolled');
+    } else if((window.scrollY < config.text_at && $('.social').style.display == "block") || (window.scrollY < config.text_at && config.social == false)) {
+        if(config.social == true) $('.social').fadeOut();
+        $('nav').classList.remove('scrolled');
+    }
 
+}
+
+/* Event listeners */
+
+window.addEventListener('resize', () => { scrollToPage(presentPage)});
+window.addEventListener('scroll', (item) => { checkScroll()});
 
 /* Loading magazine */
 if(window.$_GET['id'] === undefined) { //if id isn't specified
@@ -132,7 +135,7 @@ if(window.$_GET['id'] === undefined) { //if id isn't specified
           //everything is okay
           loadFile(`${issue.url}/pages.js`,"js").then(function(result) {
 
-             console.info('Pages loaded properly!')
+             console.info('e-Mag: Pages loaded properly!')
              createPages(pages); //generate pages
 
           }, function(err) {
@@ -145,7 +148,7 @@ if(window.$_GET['id'] === undefined) { //if id isn't specified
           let errorPage = document.createElement('article'); //create "page" for 404 not found
           errorPage.className = "not_found"; //add class not_found for css styling
           errorPage.innerHTML = "<h1>Template file not found...</h1>"; //add error message
-          document.querySelector('.content').appendChild(errorPage); //append new page to .content
+          $('.content').appendChild(errorPage); //append new page to .content
       });
 
       loadFile(`templates/${issue.template}/style.css`,"css");
