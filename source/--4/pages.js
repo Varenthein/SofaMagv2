@@ -1,6 +1,104 @@
 let pages = [
-  /*  { "page": "2", "content": new image('2.png').get()},*/
-  { "page": "3", "title": "Polska zwycięska!", "content": new page("Polska zwycięska","Eryk Deligner","Piłka nożna","valbuena.jpg",["#Francja", "#Ligue1"],"fot: Вячеслав Евдокимов",
+  { "page": "2", "title": "Witamy", "content": new html_default(
+  `
+  <div class="text">
+    <h2><span class="romb"></span>Witamy!</h2>
+    <p><strong>Sport jest pełen smutnych historii. Drużyn, które kiedyś ogrywały najmocniejszych, a teraz szukają właśnej tożsamości na obrzeżach prawdziwej rywalizacji. Sportowców, który z legend stali się pośmiewiskiem. Ludzi, którzy spadli z podiów i pierwszych stron gazet, a czasem... na nie trafili. Ale zupełnie z innych powodów, niż by sobie tego życzyli.</strong></p>
+    <p><strong>W kolejnym numerze po - nie oszukujmy się - dość długiej przerwie skupiamy się właśnie na takim motywie </strong></p>
+    <blockquote>
+    Nie będę ukrywał, że od poprzedniego wydania naszgo magazynu minęło już sporo czasu. Kilkukrotnie zabieraliśmy się do tego numeru, ale zawsze na przeszkodzie stawały pozaredakcyjne obowiązki. Magazyn Sofa Sport był jednak od początku inicjatywą, którą bardzo starannie się opiekowaliśmy i nie mamy zamiaru o niej zapomnieć.<br><br>
+     Wymarzyliśmy sobie dziennikarski projekt, który będzie nie tylko kolejną kopią gotowych rozwiązań. Takich już wiele na rynku. My chcieliśmy stworzyć coś bardziej wyjątkowego. Cel był prosty - nasz magazyn ma być interesującą lekturą, ale też taką, która będzie ciekawa nie tylko dziś czy jutro, ale i za rok, dwa, czy na nawet dekadę. I to chyba w poprzednich numerach nam się udało. Magazyn Sofa Sport stał się synonimem - grubej, poczytnej lektury, gdzie każdy numer ma swój własny fajny i interesujący motyw, a same artykuły nigdy nie tracą na aktualności. Ale kto stoi w miejscu ten się cofa. Dlatego też postawiliśmy na mały lifting.<br><br>Odeszliśmy od typowego pisemnego formatu, który był ładny, ale mało praktyczny. Postawiliśmy na nowocześność i stworzyliśmy od podstaw własny system. Być może nie jest idealny i na początku możecie trafić na błędy, ale powinniśmy mieć z niego w przyszłości wiele radości. Został bowiem skrojony idealnie do naszych potrzeb i na bazie naszych doświadczeń. Powiem krótko - nową Sofę po prostu czyta się wygodniej. Duża czionka, zero udziwnień i rozpraszaczy. Nasz magazyn ma bronić się contentem, a nie oprawą. Niemniej jednak i ona wygląda teraz schludniej, mam nadzieję, że przypadnie Wam do gustu. <br><br>Zmienił się skład redakcji, tak jak zmieniła się i cała Sofa Sport. Jesteśmy dojrzalsi, bardziej doświadczeni. Z czasem staliśmy się bardziej popularni i zachęciliśmy do współpracy kolejnych zdolnych autorów. <br><br>Ostatnia sprawa - zmianie uległa także nazwa. Sofa Sport Magazyn przechrzcił się w Sofa Magazyn. Zmiana może i kosmetyczna, ale ma nadawać nowy kierunek naszej inicjatywie.<br><br>
+    Po raz kolejny wybraliśmy cięższy temat, ale my w Sofie Sport takie lubimy ;) Mam nadzieję, że numer prypadnie Wam do gustu. Wystarczy gadania ;) Życzę Wam przyjemnej lektury :)
+    <span class="author">Paweł Zagrobelny, redaktor prowadzący</span>
+    </blockquote>
+    <div class="index">
+      <h3>Spis treści</h3>
+      <a href="javascript:scrollToPage(2)">Valbuena: L'art de la chute</a>
+      <a href="javascript:scrollToPage(3)">Walcząc ze sobą - Demony Mattiego Nykanena</a>
+      <a href="javascript:scrollToPage(4)">Olimpijska wyprawa w przeszłość – starożytne Igrzyska i ich wpływ na dzisiejszy sport</a>
+    </div>
+
+
+    <h2><span class="romb"></span>Numer współtworzyli</h2>
+    <div class="authors">
+    <h4>Redaktorzy prowadzący</h4>
+    <a class="author">
+      <img src="${issue.url}/img/authors/malanowski.jpg" alt="Wojtek Malanowski">
+      <h5>Wojciech Malanowski</h5>
+      <span>Redaktor naczelny sofasport.pl</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/zagrobelny.jpg" alt="Paweł Zagrobelny">
+      <h5>Paweł Zagrobelny</h5>
+      <span>Administrator sofasport.pl<br>Sofa Magazyn</span>
+    </a>
+    <h4>Redaktorzy</h4>
+    <a class="author">
+      <img src="${issue.url}/img/authors/delinger.jpg" alt="Eryk Delinger">
+      <h5>Eryk Delinger</h5>
+      <span>SofaSport, Le Ballon Mag</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/Warzecha.jpg" alt="Sebastian Warzecha">
+      <h5>Sebastian Warzecha</h5>
+      <span>¡Olé! Magazyn, kiedyś Retro Magazyn, LosBlancos.pl i WiedzaSportowa.pl</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/iwanski.jpg" alt="Bartek Iwański">
+      <h5>Bartłomiej Iwański</h5>
+      <span>Redaktor SofaSport.pl</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/porebski.jpg" alt="Piotr Porębski">
+      <h5>Piotr Porębski</h5>
+      <span>Redaktor SofaSport.pl i SportSlaski.pl</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/stachnik.jpg" alt="Bartek Stachnik">
+      <h5>Bartłomiej Stachnik</h5>
+      <span>Redaktor SofaSport.pl<br> Bloger - "Piłka na aucie"</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/warchal.jpg" alt="Arek Warchał">
+      <h5>Arkadiusz Warchał</h5>
+      <span>Redaktor SofaSport.pl</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/hatta.jpg" alt="Tomek Hatta">
+      <h5>Tomasz Hatta</h5>
+      <span>Redaktor SofaSport.pl</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/galas.jpg" alt="Tomek Galas">
+      <h5>Tomasz Galas</h5>
+      <span>Redaktor SofaSport.pl i Retro Magazyn</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/pilny.jpg" alt="Adam Pilny">
+      <h5>Adam Pilny</h5>
+      <span>Redaktor SofaSport.pl</span>
+    </a>
+    <h4>Pozostali</h4>
+    <a class="author">
+      <img src="${issue.url}/img/authors/kuczynska.jpg" alt="Maja Kuczyńska">
+      <h5>Maja Kuczyńska</h5>
+      <span>Korekta</span>
+    </a>
+    <a class="author">
+      <img src="${issue.url}/img/authors/zagrobelny.jpg" alt="Paweł Zagrobelny">
+      <h5>Paweł Zagrobelny</h5>
+      <span>Oprawa graficzna</span>
+    </a>
+    </div>
+
+    <p class="please-share" style="display: none">
+    Wszystkie teksty są własnością SofaSport.pl oraz ich autorów. Rozpowszechnianie ich poza formułą magazynu bez zgody ich twórców jest zabronione.  Zdjęcia użytew magazynie są wykorzystywanie na podstawie uznania autorstwa (Creative Commons 3.0 lub pokrewne).  Zdjęcię wykorzystane na okładce - By Kastom. (Own work.) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons.</p>
+
+
+  </div>
+  `
+  ).get()},
+  { "page": "3", "title": "Valbuena: L'art de la chute", "content": new page("Valbuena: L'art de la chute","Eryk Deligner","Piłka nożna","valbuena.jpg",["#Francja", "#Ligue1"],"fot: Вячеслав Евдокимов",
   "Życiorys Mathieu Valbueny nie jest typową historią o wielkim upadku, tudzież spektakularnym powrocie na szczyt – na jego opowieść składa się seria mniejszych i większych zakrętów, które niejednego piłkarza na zawsze wyrzuciłyby poza trasę do wielkich sukcesów.",
 `
 <p>Życiorys Mathieu Valbueny nie jest typową historią o wielkim upadku, tudzież spektakularnym powrocie na szczyt – na jego opowieść składa się seria mniejszych i większych zakrętów, które niejednego piłkarza na zawsze wyrzuciłyby poza trasę do wielkich sukcesów. </p>
@@ -15,11 +113,21 @@ let pages = [
 
 <p>Nie słynął ze skuteczności, lecz swoją błyskotliwością i bezczelnymi dryblingami bez reszty rozkochał w sobie zarówno trenera, jak i fanów klubu. Pewne miejsce w podstawowej jedenastce, nowy kontrakt z adekwatną podwyżką i pieszczotliwy przydomek od kibiców (le petit vélo - „Motorek”) - wszystko układało się idealnie, Mathieu Valbuena zaczynał być w Olympique'u Marsylia kimś naprawdę ważnym. Wtedy nadszedł czas na jeden z bardziej przewidywalnych zwrotów akcji w futbolu: Erica Geretsa zastąpił Didier Deschamps.</p>
 
+<figure class="img">
+  <img style="max-width: 400px" src="${issue.url}/img/valbuena2.jpg" alt="">
+  <figcaption>Valbuena szybko stał się ulubieńcem kibiców <span>Матьё Вальбуэна [CC BY-SA 3.0])</span></figcaption>
+</figure>
+
 <p>Tak jak w 2007 roku Valbuena okazał się jednym z beneficjentów przewrotu, tak dwa lata później miał paść ofiarą kolejnego. Deschamps w pierwszych tygodniach pracy wręczył bilety w jedną stronę m.in. Canie, Karimowi Zianiemu i doświadczonemu Bolo Zendenowi. O swojej nieprzystawalności do koncepcji nowego szkoleniowca poinformowany został także Valbuena. Pomocnik postawił się legendzie klubu i mimo groźby karnego zesłania do rezerw nie pozwolił się wypchnąć ze Stade Vélodrome. Nowy trener L'OM blefował tylko do pewnego stopnia: nie wyrzucił Mathieu z pierwszej drużyny, ale długo nie przewidywał dla niego startowej pozycji innej niż siedząca. Upokorzony piłkarz przyłożył się do pracy bardziej niż kiedykolwiek i po półrocznym okresie zimnej wojny z przełożonym wreszcie otrzymał od losu upragnioną szansę. W lutym 2010 zmuszony sytuacją kadrową Deschamps wyznaczył Mata do gry w wyjściowym składzie.</p>
 
 <p>Niesiony ambicją piłkarz do końca sezonu nie pozwolił się odesłać na ławkę i z tygodnia na tydzień rósł na bohatera kroczącego po dublet zespołu. Pierwszy był Puchar Ligi, a w jego ramach gole Valbueny w półfinale i finale (ten drugi, któż by się spodziewał, przeciwko Bordeaux). Później, na ostatniej prostej rozgrywek, seria trzech ligowych meczów z bramką z rzędu. Wszystkie trzy trafienia dawały Marsylii, bezcenne w walce o mistrzostwo, zwycięstwa. Tak zawodnik, który dziesięć miesięcy wcześniej usłyszał od Deschampsa-trenera „nie będziesz mi potrzebny” przyczynił się do zdobycia przez L'OM pierwszego tytułu od czasu Deschampsa-kapitana. Tytuł ów wyrwał z rąk, jakżeby inaczej, Girondins de Bordeaux.</p>
 
 <p>W ciągu zaledwie trzech miesięcy Mathieu awansował z gracza niechcianego, jeśli nie otwartego wroga, na ulubieńca trenera. Oddanym fanem drobnego piłkarza Didier Deschamps miał zostać na lata, by z czasem przenieść owo uwielbienie na grunt reprezentacyjny. – Od początku kadencji DD jako selekcjonera w lipcu 2012 do końca Mundialu w 2014 Valbuena figurował w wyjściowej jedenastce Francuzów na 20 z 27 spotkań, zaś sześciokrotnie wchodził z ławki rezerwowych. Zanim jednak do tego doszło, w nagrodę za odbicie się z pozycji, w której rozważał transfer z klubu dla ratowania resztek piłkarskiej godności, otrzymał pierwsze powołanie do seniorskiej reprezentacji. Nie miał szczęścia, bo wyjazd na Mistrzostwa Świata w RPA był dla debiutanta niczym innym, jak biletem do pierwszego rzędu na ponury spektakl o samodestrukcji kadry Raymonda Domenecha. Strajk reprezentantów w żaden sposób nie zaszkodził dalszej karierze Mata w narodowym zespole, lecz 21 minut gry na turnieju z pewnością nie było warte dopisania do życiorysu udziału w największej XXI-wiecznej kompromitacji Les Bleus.</p>
+
+<figure class="img">
+  <img src="${issue.url}/img/valbuena3.jpg" alt="">
+  <figcaption>Za kadencji Deschampsa Valbuena stał się kluczowym zawodnikiem reprezentacji<span>Xavier NALTCHAYAN [CC BY-SA 2.0])</span></figcaption>
+</figure>
 
 <p>Przykra przygoda w Afryce nie zdołała wybić Valbueny z rytmu przed kolejnym sezonem – pierwszym rozpoczętym w roli podstawowego gracza drużyny DD. Rok był dla pomocnika całkiem udany – tym bardziej, że okraszony drugim zwycięstwem w Pucharze Ligi z rzędu – ale miał stanowić tylko przygrywkę przed najlepszym okresem w jego karierze. Jak na ironię, czas rozkwitu Mathieu zbiegł się z początkiem końca Olympique'u jako zwycięskiego klubu. Z perspektywy samego piłkarza rozgrywki 2011/2012 były wspaniałe – 9 goli i 16 asyst w 49 meczach to do dziś jego osobisty rekord, w dodatku uświetniony jeszcze jednym medalem zdobywcy Coupe de la Ligue. Doskonała gra Valbueny nie wystarczyła by uchronić Marsylię przed szybującym lotem w przeciętność: zaledwie 12 miesięcy po wicemistrzostwie klub finiszował w tabeli na 10. pozycji, zaś decyzję o zmianie trenera podjęła za L'OM Francuska Federacja Piłkarska – Deschamps opuścił Vélodrome (i swojego ulubieńca) na rzecz reprezentacji.</p>
 
@@ -28,6 +136,11 @@ let pages = [
 <p>Dobrodziejstwo perspektywy pozwala z pełnym przekonaniem uznać, że to był moment, by korzystając z reputacji czołowego rozgrywającego ligi zrobić krok naprzód. Piłkarz go przegapił – został w klubie na kolejny, nijaki dla niego i drużyny sezon, by w 2014 roku popełnić podwójny błąd: u progu krótkiej acz ekscytującej epoki Marcelo Bielsy zrezygnować z Marsylii na rzecz Dynama Moskwa. Decyzja o transferze była równie wyrachowana jak jego liczne kontrolowane lądowania na murawie. Z wielu ofert, napływających po Mundialu m.in. z Premier League, Valbuena wybrał opcję najkorzystniejszą finansowo i ani przez chwilę się z tym nie krył. W Rosji pomocnik nie zawodził – ale życie i gra na Wschodzie najwyraźniej zawiodły jego, skoro rok później nie bacząc na konsekwencje bez wahania wykorzystał szansę powrotu do ojczyzny zapewnioną mu przez rywala Marsylii, Olympique Lyon.</p>
 
 <p>Jeśli liczył, że w erze dominacji innego, większego wroga Marsylczycy odpuszczą mu zdradę, nie mógł się bardziej pomylić. Przy okazji wizyty na Vélodrome w nowych barwach Mathieu został błyskawicznie pozbawiony złudzeń co do pobłażliwości byłych wielbicieli – ultrasi uhonorowali jego przybycie wieszając (w pełnym tego słowa znaczeniu) na swojej trybunie kukłę-podobiznę Valbueny i ciskając w stronę żywego odpowiednika liczne dowody afektu, czym koniec końców doprowadzili do przerwania meczu. Ani wówczas, ani na przestrzeni całego sezonu pomocnik nie zdołał swoją grą uciszyć dawnych fanów bądź zdobyć serca nowych. Możliwości odbudowania formy pozbawił go skutecznie odciągający myśli od boiska szantaż, którego Francuz padł ofiarą.</p>
+
+<figure class="img">
+  <img style="max-width:500px;" src="${issue.url}/img/valbuena4.jpg" alt="">
+  <figcaption>Sex-afera z udziałem graczy francuskiej kadry odbiła się dużym echem w mediach<span>L\`Equipe</span></figcaption>
+</figure>
 
 <p>Co gorsza, grożący ujawnieniem seks-taśmy z udziałem Valbueny przestępcy do kontaktu z piłkarzem Lyonu wykorzystali jego reprezentacyjnego kolegę, Karima Benzemę. Gdyby sama sytuacja oraz fakt współudziału człowieka z bliskiego otoczenia nie były dla gracza wystarczającym mentalnym obciążeniem, zawodnik został za swą krzywdę dodatkowo pognębiony wykluczeniem – jesienią, gdy afera wyszła na jaw, „dla dobra atmosfery w zespole” został potraktowany tak samo jak oprawca i pominięty przy powołaniach na mecze eliminacyjne Euro, choć oficjalnie o zawieszeniu nigdy nie było mowy. O słuszności takiej decyzji Deschampsa (i zapewne federacji) mogło świadczyć to, że u szczytu zamieszania próżno było szukać głosów poparcia kadrowiczów dla mało popularnego w szatni Valbueny – w świetle bogato udokumentowanej skłonności Les Bleus do wewnętrznych podziałów obawy o atmosferę nie były urojone. Gdy nadszedł czas ogłoszenia kadry na turniej, selekcjoner nie potrzebował już wymówek, bo piłkarz po złym pod każdym względem sezonie nie miał nic wspólnego z reprezentacyjną formą.</p>
 
@@ -35,50 +148,19 @@ let pages = [
 
 <p>Wygląda na to, że kieszonkowego pomocnika nie da się złamać. Już wydawało się, że obecny sezon będzie dlań ponurą kontynuacją poprzedniego – margines zespołu, ciągłe kontuzje, wszechobecna krytyka. Wszystko zmieniło się, kiedy w listopadzie zastąpił, w  przerwie przegrywanego meczu z PSG, Macieja Rybusa. Kilka minut po wejściu wyrównał wynik pięknym golem i choć ostatecznie nie dał Lyonowi choćby punktu, od tamtej pory nie oddał nikomu miejsca w zespole Bruno Genesio. Co więcej, ma za sobą serię czterech ligowych meczów z bramką – pierwszą taką w karierze. Jeśli rzeczywiście zażegnał swoje problemy na dobre i pozostanie ważnym graczem OL na dłużej, nie pozostawi już wyboru – trzeba będzie uznać go za specjalistę w wydostawaniu się z piłkarskiego niebytu. </p>
     `).get()},
-    { "page": "3", "title": "Valbuena: L'art de la chute", "content": new page("Valbuena: L'art de la chute","Eryk Deligner","Piłka nożna","valbuena.jpg",["#Francja", "#Ligue1"],"fot: Вячеслав Евдокимов",
-    "Życiorys Mathieu Valbueny nie jest typową historią o wielkim upadku, tudzież spektakularnym powrocie na szczyt – na jego opowieść składa się seria mniejszych i większych zakrętów, które niejednego piłkarza na zawsze wyrzuciłyby poza trasę do wielkich sukcesów.",
-`
-<p>Życiorys Mathieu Valbueny nie jest typową historią o wielkim upadku, tudzież spektakularnym powrocie na szczyt – na jego opowieść składa się seria mniejszych i większych zakrętów, które niejednego piłkarza na zawsze wyrzuciłyby poza trasę do wielkich sukcesów. </p>
 
-<p>Pierwszy cios zadano mu w juniorskiej drużynie Girondins de Bordeaux, gdzie występował obok m.in. Rio Antonio Mavuby czy Marouane'a Chamakha. Nastoletni Valbuena dowiedział się wówczas, że jest zbyt drobny, a jego styl gry zbyt indywidualistyczny i podwórkowy, by kiedykolwiek znalazło się dla niego miejsce w profesjonalnym futbolu. Był to 2003 rok. Od momentu, w którym wszystkie te cechy staną się znakiem rozpoznawczym Mathieu, pomocnika dzieliło sześć czy siedem sezonów.</p>
-
-<p>Wówczas, z dnia na dzień, z jednego z największych francuskich klubów Valbuena musiał przenieść się w głąb nadsekwańskiego systemu ligowego – aż na piąty szczebel, do amatorskiego Langnon-Castets. Powrotny marsz ku zawodowstwu rozpoczął niemal natychmiast – jeden sezon w Championnat de France amateur 2 wystarczył, by przekonać skautów trzecioligowego Libourne. Tam piłkarz zaczął się naprawdę rozwijać: o ile w pierwszym roku pozostawał na obrzeżach przeciętnie radzącego sobie w Championnat National zespołu, o tyle w kolejnych rozgrywkach wziął na siebie rolę lidera i swoimi dziewięcioma bramkami poprowadził drużynę do Ligue 2.</p>
-
-<p>Kolejnego stojącego przed Libourne wyzwania Mathieu nie podjął – po miniaturowego pomocnika zgłosił się bowiem wielki rywal jego macierzystego Bordeaux, Olympique Marsylia. Po trzech latach od brutalnego pożegnania z profesjonalną grą tuż u jej progu, młody pół-Bask znów był na swoim miejscu. Pierwsze kroki w olimpijskiej ekipie przyniosły jednak kolejne trudności. Rzeczywistość zaczęła nieśmiało legitymizować obawy dawnych trenerów: 22-latek nie radził sobie z obciążeniami treningowymi w pierwszoligowym klubie. Chociaż Albert Emon szybko pozwolił zadebiutować nowemu nabytkowi w meczu o stawkę, piłkarz nie zdołał podtrzymać wiary trenera i oddalił się od wyjściowej jedenastki. Jeśli o powrocie do klubu występującego w Ligue 1 można mówić jako pełnym kole zatoczonym przez prywatną historię Valbueny, to kolejny krok ex-Żyrondysta mógł poczytywać za sygnał do startu drugiego okrążenia – jego pozycja w L'OM była w pewnej chwili tak słaba, że znów wylądował w piątej lidze; tym razem jako zawodnik marsylskich rezerw.</p>
-
-<p>Do standardów pierwszej drużyny dorósł jeszcze przed końcem debiutanckiego sezonu, który zwieńczył pierwszym ekstraklasowym golem, gwarantującym Marsylii awans do kolejnej edycji Champions League. Po wakacyjnej przerwie Valbuena stawił się w klubie w szczytowej dyspozycji i wywalczył sobie rolę jednego z liderów wymuszonej  odejściami Francka Ribéry'ego i Habiba Beye'a rewolucji. Wraz z ochrzczonym „nowym Zidanem” Samirem Nasrim i świeżo mianowanym kapitanem Lorikiem Caną miał stanowić trzon nowej drużyny. Chociaż miewał kłopoty z utrzymaniem formy, pod batutą zatrudnionego po dziewięciu kolejkach Ligue 1 Erica Geretsa, jego ponadprzeciętne zdolności zaczęły coraz częściej dochodzić do głosu: na własnym podwórku Francuz uderzeniem z 40 metrów w meczu z Caen ustrzelił nagrodę za gola sezonu, zaś w dziewiczej kampanii w Lidze Mistrzów swoją bramką przeciwko Liverpoolowi zapewnił Marsylii historyczne zwycięstwo na Anfield.</p>
-
-<p>Nie słynął ze skuteczności, lecz swoją błyskotliwością i bezczelnymi dryblingami bez reszty rozkochał w sobie zarówno trenera, jak i fanów klubu. Pewne miejsce w podstawowej jedenastce, nowy kontrakt z adekwatną podwyżką i pieszczotliwy przydomek od kibiców (le petit vélo - „Motorek”) - wszystko układało się idealnie, Mathieu Valbuena zaczynał być w Olympique'u Marsylia kimś naprawdę ważnym. Wtedy nadszedł czas na jeden z bardziej przewidywalnych zwrotów akcji w futbolu: Erica Geretsa zastąpił Didier Deschamps.</p>
-
-<p>Tak jak w 2007 roku Valbuena okazał się jednym z beneficjentów przewrotu, tak dwa lata później miał paść ofiarą kolejnego. Deschamps w pierwszych tygodniach pracy wręczył bilety w jedną stronę m.in. Canie, Karimowi Zianiemu i doświadczonemu Bolo Zendenowi. O swojej nieprzystawalności do koncepcji nowego szkoleniowca poinformowany został także Valbuena. Pomocnik postawił się legendzie klubu i mimo groźby karnego zesłania do rezerw nie pozwolił się wypchnąć ze Stade Vélodrome. Nowy trener L'OM blefował tylko do pewnego stopnia: nie wyrzucił Mathieu z pierwszej drużyny, ale długo nie przewidywał dla niego startowej pozycji innej niż siedząca. Upokorzony piłkarz przyłożył się do pracy bardziej niż kiedykolwiek i po półrocznym okresie zimnej wojny z przełożonym wreszcie otrzymał od losu upragnioną szansę. W lutym 2010 zmuszony sytuacją kadrową Deschamps wyznaczył Mata do gry w wyjściowym składzie.</p>
-
-<p>Niesiony ambicją piłkarz do końca sezonu nie pozwolił się odesłać na ławkę i z tygodnia na tydzień rósł na bohatera kroczącego po dublet zespołu. Pierwszy był Puchar Ligi, a w jego ramach gole Valbueny w półfinale i finale (ten drugi, któż by się spodziewał, przeciwko Bordeaux). Później, na ostatniej prostej rozgrywek, seria trzech ligowych meczów z bramką z rzędu. Wszystkie trzy trafienia dawały Marsylii, bezcenne w walce o mistrzostwo, zwycięstwa. Tak zawodnik, który dziesięć miesięcy wcześniej usłyszał od Deschampsa-trenera „nie będziesz mi potrzebny” przyczynił się do zdobycia przez L'OM pierwszego tytułu od czasu Deschampsa-kapitana. Tytuł ów wyrwał z rąk, jakżeby inaczej, Girondins de Bordeaux.</p>
-
-<p>W ciągu zaledwie trzech miesięcy Mathieu awansował z gracza niechcianego, jeśli nie otwartego wroga, na ulubieńca trenera. Oddanym fanem drobnego piłkarza Didier Deschamps miał zostać na lata, by z czasem przenieść owo uwielbienie na grunt reprezentacyjny. – Od początku kadencji DD jako selekcjonera w lipcu 2012 do końca Mundialu w 2014 Valbuena figurował w wyjściowej jedenastce Francuzów na 20 z 27 spotkań, zaś sześciokrotnie wchodził z ławki rezerwowych. Zanim jednak do tego doszło, w nagrodę za odbicie się z pozycji, w której rozważał transfer z klubu dla ratowania resztek piłkarskiej godności, otrzymał pierwsze powołanie do seniorskiej reprezentacji. Nie miał szczęścia, bo wyjazd na Mistrzostwa Świata w RPA był dla debiutanta niczym innym, jak biletem do pierwszego rzędu na ponury spektakl o samodestrukcji kadry Raymonda Domenecha. Strajk reprezentantów w żaden sposób nie zaszkodził dalszej karierze Mata w narodowym zespole, lecz 21 minut gry na turnieju z pewnością nie było warte dopisania do życiorysu udziału w największej XXI-wiecznej kompromitacji Les Bleus.</p>
-
-<p>Przykra przygoda w Afryce nie zdołała wybić Valbueny z rytmu przed kolejnym sezonem – pierwszym rozpoczętym w roli podstawowego gracza drużyny DD. Rok był dla pomocnika całkiem udany – tym bardziej, że okraszony drugim zwycięstwem w Pucharze Ligi z rzędu – ale miał stanowić tylko przygrywkę przed najlepszym okresem w jego karierze. Jak na ironię, czas rozkwitu Mathieu zbiegł się z początkiem końca Olympique'u jako zwycięskiego klubu. Z perspektywy samego piłkarza rozgrywki 2011/2012 były wspaniałe – 9 goli i 16 asyst w 49 meczach to do dziś jego osobisty rekord, w dodatku uświetniony jeszcze jednym medalem zdobywcy Coupe de la Ligue. Doskonała gra Valbueny nie wystarczyła by uchronić Marsylię przed szybującym lotem w przeciętność: zaledwie 12 miesięcy po wicemistrzostwie klub finiszował w tabeli na 10. pozycji, zaś decyzję o zmianie trenera podjęła za L'OM Francuska Federacja Piłkarska – Deschamps opuścił Vélodrome (i swojego ulubieńca) na rzecz reprezentacji.</p>
-
-<p>Nowego szefa, Eliego Baupa, Mathieu przywitał już jako niekwestionowana gwiazda zespołu i całej Ligue 1. Francja doskonale znała go już jako szybkiego dryblera, wybitnego kreatora, ale też piłkarza wyciskającego maksimum ze swojej postury i chętnie wczuwającego się w rolę „tego mniejszego”, stale poszkodowanego przez silniejszych rywali. Rozwój umiejętności czysto piłkarskich wyraźnie osłabił zdolność Mathieu do walki z grawitacją, co sprawiło, że adoratorów swojego talentu miał już tylko wśród kibiców własnego klubu – poza Stade Vélodrome mógł liczyć wyłącznie na hurtowe ilości przysłaniającej wszelki podziw nienawiści. Swój gwiazdorski status, ze wszystkimi jego zaletami i wadami, potwierdził jako podopieczny Baupa: niemal powtórzył indywidualne wyniki (5 goli, 14 asyst), a jako piłkarz nieco odbudowanej i znów wicemistrzowskiej Marsylii dawał się nienawidzić bez krzty wyrzutów sumienia.</p>
-
-<p>Dobrodziejstwo perspektywy pozwala z pełnym przekonaniem uznać, że to był moment, by korzystając z reputacji czołowego rozgrywającego ligi zrobić krok naprzód. Piłkarz go przegapił – został w klubie na kolejny, nijaki dla niego i drużyny sezon, by w 2014 roku popełnić podwójny błąd: u progu krótkiej acz ekscytującej epoki Marcelo Bielsy zrezygnować z Marsylii na rzecz Dynama Moskwa. Decyzja o transferze była równie wyrachowana jak jego liczne kontrolowane lądowania na murawie. Z wielu ofert, napływających po Mundialu m.in. z Premier League, Valbuena wybrał opcję najkorzystniejszą finansowo i ani przez chwilę się z tym nie krył. W Rosji pomocnik nie zawodził – ale życie i gra na Wschodzie najwyraźniej zawiodły jego, skoro rok później nie bacząc na konsekwencje bez wahania wykorzystał szansę powrotu do ojczyzny zapewnioną mu przez rywala Marsylii, Olympique Lyon.</p>
-
-<p>Jeśli liczył, że w erze dominacji innego, większego wroga Marsylczycy odpuszczą mu zdradę, nie mógł się bardziej pomylić. Przy okazji wizyty na Vélodrome w nowych barwach Mathieu został błyskawicznie pozbawiony złudzeń co do pobłażliwości byłych wielbicieli – ultrasi uhonorowali jego przybycie wieszając (w pełnym tego słowa znaczeniu) na swojej trybunie kukłę-podobiznę Valbueny i ciskając w stronę żywego odpowiednika liczne dowody afektu, czym koniec końców doprowadzili do przerwania meczu. Ani wówczas, ani na przestrzeni całego sezonu pomocnik nie zdołał swoją grą uciszyć dawnych fanów bądź zdobyć serca nowych. Możliwości odbudowania formy pozbawił go skutecznie odciągający myśli od boiska szantaż, którego Francuz padł ofiarą.</p>
-
-<p>Co gorsza, grożący ujawnieniem seks-taśmy z udziałem Valbueny przestępcy do kontaktu z piłkarzem Lyonu wykorzystali jego reprezentacyjnego kolegę, Karima Benzemę. Gdyby sama sytuacja oraz fakt współudziału człowieka z bliskiego otoczenia nie były dla gracza wystarczającym mentalnym obciążeniem, zawodnik został za swą krzywdę dodatkowo pognębiony wykluczeniem – jesienią, gdy afera wyszła na jaw, „dla dobra atmosfery w zespole” został potraktowany tak samo jak oprawca i pominięty przy powołaniach na mecze eliminacyjne Euro, choć oficjalnie o zawieszeniu nigdy nie było mowy. O słuszności takiej decyzji Deschampsa (i zapewne federacji) mogło świadczyć to, że u szczytu zamieszania próżno było szukać głosów poparcia kadrowiczów dla mało popularnego w szatni Valbueny – w świetle bogato udokumentowanej skłonności Les Bleus do wewnętrznych podziałów obawy o atmosferę nie były urojone. Gdy nadszedł czas ogłoszenia kadry na turniej, selekcjoner nie potrzebował już wymówek, bo piłkarz po złym pod każdym względem sezonie nie miał nic wspólnego z reprezentacyjną formą.</p>
-
-<p>Pierwszy rok w Lyonie był bowiem dla Mathieu Valbueny koszmarem. Czego nie odebrał skandal obyczajowy i wynikła z niego kiepska kondycja mentalna, zabrały playmakerowi prześladujące go kontuzje. Kiedy pojawiał się na murawie, stale był jednym z najsłabszych piłkarzy OL i w końcu definitywnie stracił miejsce w jedenastce Les Gones na rzecz 19-letniego Maxwela Corneta – a to dla wystarczająco już sfrustrowanego (ex-)gwiazdora był ostateczny cios. Latem został ogłoszony wielkim zakupowym błędem klubu i mówiło się, że trafił na listę transferową prezesa Jeana-Michela Aulasa. Wbrew plotkom letnie okienko zakończył jednak jako piłkarz Olympique'u.</p>
-
-<p>Wygląda na to, że kieszonkowego pomocnika nie da się złamać. Już wydawało się, że obecny sezon będzie dlań ponurą kontynuacją poprzedniego – margines zespołu, ciągłe kontuzje, wszechobecna krytyka. Wszystko zmieniło się, kiedy w listopadzie zastąpił, w  przerwie przegrywanego meczu z PSG, Macieja Rybusa. Kilka minut po wejściu wyrównał wynik pięknym golem i choć ostatecznie nie dał Lyonowi choćby punktu, od tamtej pory nie oddał nikomu miejsca w zespole Bruno Genesio. Co więcej, ma za sobą serię czterech ligowych meczów z bramką – pierwszą taką w karierze. Jeśli rzeczywiście zażegnał swoje problemy na dobre i pozostanie ważnym graczem OL na dłużej, nie pozostawi już wyboru – trzeba będzie uznać go za specjalistę w wydostawaniu się z piłkarskiego niebytu. </p>
-      `).get()},
-
-
-      { "page": "3", "title": "Walcząc ze sobą - Demony Mattiego Nykanena", "content": new page("Walcząc ze sobą - Demony Mattiego Nykanena","Sebastian Warzecha","Skoki narciarskie","nykanen.jpg", ["#SkiJumping", "#Nykanen"], "Jakke Nikkarinen / Suomen Moneta - mynewsdesk.com",
+      { "page": "3", "title": "Walcząc ze sobą - Demony Mattiego Nykanena", "content": new page("Walcząc ze sobą - Demony Mattiego Nykanena","Sebastian Warzecha","Skoki narciarskie","nykanen.jpg", ["#SkiJumping", "#Nykanen"], "fot: PASI LIESIMAA",
        "Każdy ma swoje demony. Demonem Mattiego Nykänena był, jak dla wielu przed nim i po nim, alkohol. A kiedy demon przejmował nad nim władzę, to i sam Matti takim się stawał. On, najlepszy w historii, król skoczni, zwycięzca. Przegrywał ze swoim demonem. Przegrywał sam ze sobą.",
         `
         <h3>Koniec</h3>
 <p>25 luty 1990, skocznia Vikersundbakken w Vikersund. Mistrzostwa Świata w Lotach. Matti Nykänen siedzi na belce, szykuje się do kolejnego skoku w zawodach. Jego forma  w tym sezonie nie mogła go zadowalać, ale teraz walczy o medal wielkiej imprezy. Jeszcze nie wie, że ostatni w swej karierze. Odbija się od belki, kilka chwil później jest już w powietrzu. Szybuje pięknie, starym stylem, którego był królem, idealnie ułożony w powietrzu. Jak to on. Ląduje na 160 metrze. Później okaże się, że ten skok daje mu srebrny medal. </p>
 <p>Jak napisano, był to ostatni krążek z wielkiej imprezy w bogatej karierze Fina. Czterokrotny mistrz olimpijski, pięciokrotny mistrz świata, czterokrotny zwycięzca Pucharu Świata, dwukrotny tryumfator Turnieju Czterech Skoczni… Nie było imprezy, na której Nykänen by nie dominował. Rok po srebrze zdobytym w Norwegii, Matti zdecydował się przejść na sportową emeryturę. W wieku zaledwie 27 lat. W skakaniu przeszkadzały mu chore plecy (później zoperowane), sportowe wypalenie, a także niechęć do przejścia na styl V. </p>
 <p>To był moment zwrotny w jego życiu. Moment, w którym sport nie mógł dłużej powstrzymywać tego, co w Finie się kryło. Zresztą już wcześniej bywało z tym różnie, ale zawsze była skocznia, były treningi, były medale do zdobycia, konkursy do wygrania. Teraz tego zabrakło. „Przeszedłem z dobrze mi znanego systemu do fazy niepewności. Przez całe swoje życie robiłem coś zupełnie innego i teraz tego dłużej nie miałem. Świat spoza skoków narciarskich był całkowicie inny od tego, który znałem do tej pory” mówił po latach w swej biografii. </p>
+
+<blockquote>
+  „Przeszedłem z dobrze mi znanego systemu do fazy niepewności. Przez całe swoje życie robiłem coś zupełnie innego i teraz tego dłużej nie miałem. Świat spoza skoków narciarskich był całkowicie inny od tego, który znałem do tej pory”
+  <span class="author">Matti Nykänen, "Pozdrowienia z piekła"</span>
+</blockquote>
 <h3>Początek</h3>
 
 <p>Pierwszy skok oddał podobno w wieku 7 lat. Tak twierdził kiedyś. Niedawno zmienił zdanie i okazało się, że skakać zaczął w wieku lat 12. Pewny jest za to, kiedy zaczął pić – miał wtedy 14 lat i dopiero wchodził w „juniorski” okres swojego życia. Alkohol towarzyszył mu potem przez całą karierę. Doszło do tego, że w  sezonie 1985/86 zainterweniować musiała fińska federacja. Matti został przez nią zawieszony. Zresztą nie po raz ostatni.
@@ -89,6 +171,10 @@ let pages = [
 <h3>„Dr Jekyll i Mr Hyde” </h3>
 
 <p>Każdy, kto go zna, przyzna, że Matti ma dwa oblicza. <em>„Kiedy jest trzeźwy, to jeden z najmilszych i najprzyjaźniejszych ludzi, jakich poznałem. Pijany, jest agresywny i niebezpieczny”</em> mówił o nim Egon Theiner, współautor biografii Fina. </p>
+<blockquote>
+  „Kiedy jest trzeźwy, to jeden z najmilszych i najprzyjaźniejszych ludzi, jakich poznałem. Pijany, jest agresywny i niebezpieczny”
+  <span class="author">Egon Theiner, współautor biografii Matti'ego</span>
+</blockquote>
 <p>Życie Nykänena to ciągłe balansowanie na ostrzu noża. Po jednej jego stronie czai się spokojny, miły człowiek. Po drugiej agresor, zdolny do wszystkiego. Zresztą porównanie to jest nieprzypadkowe. To właśnie od noża zaczynała się większość jego „przygód”. Gdzie się kończyły? Zwykle w więzieniu, którego był częstym gościem. </p>
 <p>W 2003 roku został skazany na cztery miesiące za kratkami, jednak wyrok został zawieszony. Próbował wtedy zaatakować nożem swoją żonę, Mervi Tapolę, która była zresztą jego czwartą wybranką. Cała sprawa skończyła się rozwodem, ale już rok później para wróciła do siebie. Krótko po tym Matti już nie tylko „próbował”, ale też zranił nożem swego przyjaciela, gdy przebywali w domku letniskowym Tapoli. Od dłuższej kary, niż otrzymane 26 miesięcy więzienia, uchronił go sędzia, uznając, że Matti w chwili ataku był pod wpływem alkoholu i nie panował nad sobą. Sądzono go więc nie za próbę zabójstwa, ale za uszkodzenie ciała. </p>
 <p>Wyszedł z więzienia warunkowo, we wrześniu 2005 roku. Niedługo po tym ponownie do niego trafił, na cztery miesiące, kiedy po raz kolejny zaatakował żonę. Znów wyszedł i znów prędko do niego wrócił, gdy rzucił się z nożem na klienta pizzerii, w której akurat przebywał. Pierwotnie skazano go na dwa lata, ale udało mu się wywinąć dwoma miesiącami w więzieniu i pracami społecznymi. Ostateczna kara przyszła w 2009 roku, gdy ponownie zaatakował i zranił nożem swą żonę. Próbował też udusić ją paskiem od szlafroka. Ona sama wniosła do sądu pozew rozwodowy, już piętnasty, który okazał się być ostatnim. Nawet Mervi miała dość. </p>
@@ -96,6 +182,10 @@ let pages = [
 
 <p> <em>„Adam Małysz i Jens Weissflog osiągnęli bardzo wiele. Gregor Schlierenzauer to też wyjątkowy zawodnik, ale nikt z nich nie osiągał takich wyników jak Nykaenen”</em> mówił jakiś czas temu Walter Hofer, gdy Przegląd Sportowy przeprowadzał głosowanie na skoczka wszechczasów. Nykänen zdystansował w nim rywali, podobnie jak czynił to na skoczni. </p>
 <p>Przez wiele lat Fin był ulubieńcem fanów, człowiekiem, którego rywalizacja z Weissflogiem rozbudzała wyobraźnię każdego kibica. Czterokrotny mistrz olimpijski, najlepszy w historii. Nie miał wyjścia, musiał zostać idolem. Na jego skokach wychowało się następne pokolenie wielkich zawodników. To jego podziwiali Adam Małysz, Andreas Goldberger czy Janne Ahonen, gdy byli nastolatkami. Jego sukcesy chcieli powtórzyć. </p>
+<blockquote>
+„Adam Małysz i Jens Weissflog osiągnęli bardzo wiele. Gregor Schlierenzauer to też wyjątkowy zawodnik, ale nikt z nich nie osiągał takich wyników jak Nykaenen”
+  <span class="author">Walter Hofer</span>
+</blockquote>
 <p>W 1999 roku jego rodacy wybrali go drugim najlepszym fińskim sportowcem XX wieku. Przegrał jedynie z Paavo Nurmim – wielkim biegaczem długodystansowym, dziewięciokrotnym złotym medalistą olimpijskim, zdobywcą złotych krążków na trzech różnych Igrzyskach. Taką porażkę można zaakceptować. Znacznie trudniej zaakceptować porażkę idola w walce z nałogami, a to musieli zrobić fani Nykänena. Choć ostatnio, na myśl o Mattim, mogą się częściej uśmiechać. </p>
 <figure class="img">
   <img src="${issue.url}/img/Nykanen2.JPG" alt="">
@@ -108,6 +198,44 @@ let pages = [
 <p>Pozostaje zadać sobie pytanie: jak długo Matti Nykänen będzie w stanie się na tej prostej utrzymać? Jego demony nie zginęły, pozostają uśpione. Nigdy nie wiadomo, czy nie obudzą się, by ściągnąć fińskiego mistrza na złą drogę. </p>
 
         `).get()},
+
+        { "page": "3", "title": "Olimpijska wyprawa w przeszłość – starożytne Igrzyska i ich wpływ na dzisiejszy sport", "content": new page("Olimpijska wyprawa w przeszłość – starożytne Igrzyska i ich wpływ na dzisiejszy sport","Bartłomiej Iwaśnki","Sport","olimpiada.jpg", ["#Olimpida", "#Historia"], "fot: własne",
+        "Sport bywa czasem czymś więcej niż tylko zwykłą rywalizacją z przeciwnikami. Prawie 3 tysiące lat temu w głowach starożytnych Greków pojawił się pomysł stworzenia zmagań, mających odsunąć na dalszy plan wszystkie inne przyziemne i duchowe problemy. Na krótki czas trwania Igrzysk zaprzestawano wojen, a centralnym punktem życia religijnego mieszkańców Hellady stawała się Olimpia. Według wierzeń, w trakcie sportowych walk, szczególnie czuwał nad nią Zeus. Jak wyglądała antyczna rywalizacja i ile ma wspólnego ze sportem, który oglądamy obecnie?",
+  `
+  <h3>Wieczna chwała dla zwycięzców</h3>
+
+<p>Starożytne Igrzyska, których początek datowany jest na rok 776 p.n.e. dały początek współczesnym zawodom sportowym. I, choć analogii z obecną rywalizacją jest sporo, to mityczne zmagania na Półwyspie Peloponeskim były jednak czymś więcej niż tylko walką o pokonanie rywali i zdobycie nagród materialnych. </p>
+<p>Zwycięzcy, czyli olimpionicy zdobywali wieczną chwałę. O szczególnym traktowaniu triumfatorów przekonał się w V wieku p.n.e. Dorieus z Rodos. Po trzykrotnym wygraniu pankrationu (starożytnej wersji dzisiejszego MMA) brał on udział w wojnie peloponeskiej przeciwko Atenom, podczas której trafił do niewoli. Gdy jego wrogowie dowiedzieli się, kto jest ich więźniem, błyskawicznie darowali mu wolność. Dorieus ostatecznie i tak został stracony – gdy Rodos stanęło po jednej stronie z Atenami w konflikcie ze Spartą, trzykrotny olimpionik został przechwycony i stracony przez wrogów, którzy nie szanowali pankrationu. Konkurencja kończyła się bowiem przez poddanie jednego z walczących, a Spartanie nie uznawali kapitulacji i otwarcie bojkotowali tę dyscyplinę sportu.  </p>
+<p>Zwycięzcy Igrzysk w ostatnim dniu trwania imprezy zyskiwali przywilej postawienia swojego posągu w gaju Zeuza – Altis. Początkowo pustawy ogród z biegiem czasu zapełniał się rzeźbami i świątyniami, wznoszonymi ku chwale największego z greckich Bogów. Tradycyjnie olimpionicy dekorowani byli wieńcem z gałązki świętej oliwki – rosnącej w gaju Altis i będącej, według opracowania Jana Parandowskiego, starym, zgrzybiałym drzewkiem, którego dwie gałęzie przypominały jednak muskularne ramiona atlety. </p>
+<p>Największym starożytnym mistrzem był Leonidas z Rodos. Wybitny biegacz, który wsławił się zdobyciem tytułu Triastes (zwycięstwo w trzech konkurencjach biegowych – stadion (192,8 m), diaulos (dystans dwóch stadionów) i hoplitodromos, czyli bieg w zbroi)  na 4 kolejnych Igrzyskach, w latach 164 – 152 p.n.e. Jego rekord, a więc 12 tytułów mistrza olimpijskiego, przetrwał ponad 2000 lat, a pobity został dopiero na ostatnich Igrzyskach w Rio de Janeiro przez Michaela Phelpsa. Wyczyny obu sportowców ciężko jest jednak porównywać. Liczba konkurencji, w których bierze udział obecnie Amerykanin, jest nieporównywalnie większa. Leonidas ostatnie laury zdobywał w wieku 36 lat, co, jak na tamte czasy, było nie lada osiągnięciem. Z drugiej strony, starożytne Igrzyska zrzeszały jedynie sportowców z greckich polis (miast-państw), natomiast obecnie jest to impreza globalna, a co za tym idzie,rywalizacja jest zdecydowanie trudniejsza. Nie umniejsza to jednak zasług Leonidasa z Rodos, który zdominował w swoim czasie sportowe zmagania . Współcześni mu ludzie uznali go za herosa, a jego rekord przetrwał wiele epok. </p>
+
+<h3>Tradycje i zwyczaje</h3>
+
+<p>Igrzyska były dla starożytnych Greków czasem wyjątkowym. Na miesiąc przed rozpoczęciem zmagań następował święty pokój (ekechejria) – na terenie całego kraju zaprzestawano wojen, by ludność mogła zjechać się do Olimpii, a sportowcy w spokoju mogli zakończyć przygotowania do rywalizacji. Zawodnicy swoje treningi rozpoczynali na 10 miesięcy przed startem Igrzysk, trenując w swoich rodzinnych miastach w specjalnych miejscach, zwanych gimnazjonami. Ostatni miesiąc przygotowań spędzali pod okiem hellanodików, czyli sędziów dbających o prawidłową organizację i przebieg zawodów. To oni na koniec podejmowali decyzję o dopuszczeniu sportowca do startu w Igrzyskach. Mężczyźni, mający wystartować w zawodach, składali, w obecności ojca i rodzeństwa, uroczystą przysięgę, w której zapewniali o sumiennym przygotowaniu do rywalizacji i deklarowali swoją uczciwość. W przypadku niedotrzymania obietnicy, zawodników spotykało potępienie poprzez postawienie pomnika hańby oraz nakładano na nich karę grzywny. </p>
+<p>Początkowo zawodnicy występowali z opaskami na biodrach, jednak po incydencie podczas 15. Igrzysk, gdy Orsippos z Megary lub, według innych źródeł, Akantos ze Sparty zgubił w trakcie biegu swoje odzienie i wpadł na linię mety w stroju Adama, podjęto decyzję, że od tej pory wszyscy sportowcy będą rywalizować nago, z wyjątkiem dwóch konkurencji – wyścigu rydwanów i wspomnianego wcześniej wyścigu w zbroi. Próżno jednak było szukać wśród widowni kobiet, mogących nacieszyć oko takim widokiem – płeć piękna nie miała wstępu na obiekty sportowe, a mężatki na czas Igrzysk zmuszone były do opuszczenia Olimpii. </p>
+<p>Czas trwania Igrzysk od zawsze symbolizował płonący znicz. W starożytności rozpalano go w świętym gaju przy pomocy promieni słonecznych, skupionych przez zwierciadło. Płonący ogień miał symbolizować prawdę, wiedzę, światło i czystość. W przeciwieństwie do obecnych zwyczajów, w starożytności rozpaleniu znicza nie towarzyszyły żadne huczne obrzędy. Sztafety z ogniem i uroczyste ceremonie są zjawiskiem stosunkowo nowym, zapoczątkowanym przy okazji Igrzysk w Berlinie w 1936 roku. </p>
+<p>Starożytne Igrzyska nie były tak rozbudowane, jak obecne – początkowo trwały zaledwie jeden dzień. Z czasem ich formułę rozbudowano do 5 dni, gdzie pierwszy dzień poświęcony był na składanie przysięgi, a ostatni na nagradzanie zwycięzców i stawianie posągów. W środku rywalizacji był natomiast czas na ponowne składanie ofiar Zeusowi. Liczba konkurencji również była nieporównywalnie mniejsza do współczesnej. Poza wspomnianymi biegami, pankrationem i wyścigami rydwanów, rywalizowano również w skoku w dal, rzucie dyskiem i oszczepem, w zapasach oraz boksie. </p>
+
+<h3>Upadek Igrzysk</h3>
+
+<p>Starożytne Igrzyska rozgrywano przez przeszło 1000 lat. Z czasem ich znaczenie zaczęło spadać, na co wpływ miało wiele czynników. Zainteresowanie wciąż było bardzo duże, ale ogromna rzesza chętnych do uczestniczenia w tym wydarzeniu w roli widzów nie niosła za sobą odpowiedniej liczby sportowców. Poziom współzawodnictwa z biegiem lat stawał się coraz słabszy. Rozwojowi Igrzysk w Grecji nie pomogły również mocarstwowe zapędy Cesarstwa Rzymskiego. </p>
+<p>Po narodzeniu Chrystusa zaczął się stopniowy proces zawłaszczania największej sportowej imprezy przez kolejnych cesarzy. W I w. n.e. rozpoczęło się ograbianie Olimpii ze skarbów, zgromadzonych tam na przestrzeni kilkuset lat. W kolejnych latach obiekty olimpijskie zostały częściowo rozebrane w celu stworzenia fortyfikacji obronnych. Końcem starożytnych Igrzysk był rok 393 n.e., gdy cesarz Teodozjusz I Wielki wydał zakaz ich organizowania. Pozostałości po sportowej świetności Olimpii nie przetrwały długo. Altis zostało doszczętnie zniszczone, a resztki olimpijskich aren pogrzebało trzęsienie ziemi ok VI w. n.e. </p>
+
+<h3>Odrodzenie idei olimpijskiej</h3>
+
+<p>Idea organizowania Igrzysk zniknęła na ok. 15 stuleci. W roku 1896 w Atenach odrodziła się za sprawą Pierre'a de Coubertina – francuskiego barona, pomysłodawcy odbudowania ruchu olimpijskiego. Tradycyjnie, kolejne imprezy zaczęto organizować co 4 lata. Igrzyska nie były jednakże już tylko rozgrywką dla sportowców greckich. Do rywalizacji zaproszono wszystkie nacje, skupione wewnątrz nowo powstałego Międzynarodowego Komitetu Olimpijskiego, którego prezesem na długie lata został wybrany właśnie Pierre de Coubertin. Wedle jego założeń, sport miał nie tylko kształtować siłę fizyczną, ale miał również stać się przyczyną/ czynnikiem do zaszczepienia pokoju ducha i połączenia wielu narodów w duchu sportowej rywalizacji, czego dowodem stały się olimpijskie koła – symbol splecionych ze sobą pięciu kontynentów. Dowodem uznania dla tradycji był wybór stolicy Grecji jako pierwszego miasta – gospodarza nowożytnych Igrzysk. </p>
+<p>Główną areną zmagań został, odbudowany wielkim kosztem, historyczny Stadion Panateński (Panathinaiko) – obiekt w kształcie półelipsy, będący jedyną tego typu budowlą na świecie, w całości wykonaną z marmuru. Obecnie Panathinaiko jest nie tylko jedną z głównych atrakcji turystycznych Aten. Po kolejnych modernizacjach był m.in. areną zmagań łuczników przy okazji Igrzysk w 2004 r. Jest także symbolicznym miejscem, gdzie kończą się maratony. W 1896 r. zmagania sportowców na tym obiekcie śledziło na żywo ok. 80 tysięcy osób. Każdemu, kto chce na własnej skórze poczuć klimat antycznych zmagań, polecam stanąć na podium, na środku stadionu, i rozejrzeć się po marmurowych trybunach, kryjących tysiące lat historii sportu. </p>
+<h3>Nowe idee</h3>
+
+<p>W kolejnych latach po powstaniu nowożytnych Igrzysk, zaczęły kiełkować idee o powiększeniu ruchu olimpijskiego o dodatkowe gałęzie. Wzrastała nie tylko liczba konkurencji w trakcie letnich zmagań. Pojawił się pomysł organizowania zimowego odpowiednika tej rywalizacji. Odbyło się to po raz pierwszy w 1924 roku we francuskim Chamonix.  Lista rozegranych konkurencji początkowo nie była długa. Składały się na nią: narciarstwo klasyczne, łyżwiarstwo szybkie, łyżwiarstwo figurowe, hokej na lodzie, curling i bieg patroli wojskowych, będący odpowiednikiem dzisiejszego biathlonu. </p>
+<p>Pomysł rozegrania kolejnych zawodów zrodził się w 1948 roku w głowach brytyjskich weteranów II wojny światowej, chcących zorganizować rywalizację dla osób niepełnosprawnych. Ich starania, pod przewodnictwem doktora Ludwika Guttmanna, doprowadziły wkrótce do powstania pierwszych Igrzysk Paraolimpijskich, które miały miejsce w 1960 roku w Rzymie. Z biegiem lat zyskiwały one na znaczeniu, aż w 1988 roku po raz pierwszy w historii zostały rozegrane na tych samych obiektach, co rywalizacja osób zdrowych. </p>
+
+<h3>Olimpijskie ideały współcześnie</h3>
+
+<p>Starożytne Igrzyska, pomimo tego, że niewiele mają wspólnego z obecną rywalizacją, często mylnie nazywaną Olimpiadą (co oznacza 4-letni czas oczekiwania na kolejne zmagania, a nie samą imprezę), dały początek sportowi, który znamy współcześnie. Dzisiejszy kształt olimpijskiej rywalizacji dostosowany jest w dużej mierze do wymagań komercyjnych. Formował się na przestrzeni lat – od momentu ustanowienia nowożytnych Igrzysk pod koniec XIX wieku. Liczba konkurencji z biegiem lat się powiększała, a walka wielu dyscyplin o uzyskanie miana sportu olimpijskiego nadal trwa. Dziś Igrzyska, pomimo zakazu umieszczania reklam na strojach zawodników, są przesiąknięte pieniędzmi i wymaganiami firm, będących sponsorami strategicznymi całych zmagań. Kraje, owładnięte wojną ani myślą zaprzestawać walk dla uczczenia rywalizacji. Wręcz przeciwnie – niedawny najazd wojsk rosyjskich na Ukrainę zbiegł się w czasie z zimowymi Igrzyskami w Soczi. Tak samo, jak przy okazji każdej dużej imprezy, również tutaj realne jest zagrożenie atakiem terrorystycznym. </p>
+<p>Mimo tak wielu czynników, odbierających Igrzyskom Olimpijskim dawny etos i wyjątkowość, są one w dalszym ciągu traktowane jako wydarzenie szczególne w świecie sportu. Żadnej porażki zawodnicy nie przeżywają tak mocno, jak niepowodzenia z pięcioma kołami olimpijskimi w tle, a każdy wyjątek od reguły potwierdza, jak ważna jest to rywalizacja również dla kibiców. Wystarczyło, by Agnieszka Radwańska stwierdziła, że w zasadzie to turnieje Wielkoszlemowe są dla tenisistów ważniejsze, by w całej Polsce rozpętała się burza, a za zawodniczką te pochopne słowa będą się ciągnęły prawdopodobnie do końca kariery. Okazało się, że kibic jest w stanie wybaczyć sportowcowi niemal wszystko, ale nie zlekceważenie ideałów olimpijskich. </p>
+
+          `).get()},
 
 
 /*

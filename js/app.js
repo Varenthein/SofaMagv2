@@ -1,10 +1,13 @@
 const container = $('.content'); //get magazine container
 let issue = ""; //global issue variable
 presentPage = 0; //present page
+var timer;
 
 const config = {
   "social": false,
   "text_at": window.innerHeight,
+  "timer": true,
+  "timer_time": 20
 }
 
 
@@ -18,14 +21,32 @@ function setNavTo(page) {
 
 }
 
+function countdown() {
+  //select time
+  let time = parseInt($("nav .after").innerText);
+  if(time == 0) {
+    clearInterval(timer);
+    time = config.timer_time;
+    $("nav a.go-right").click();
+  } else time--;
+  $("nav .after").innerText = time;
+}
 //scrollToPage
 function scrollToPage(page = 0) {
   presentPage = page;
+
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) * page;
   window.scrollIt(w, 1);
+
+  //hide .please-share and remove timer
+  $All(".page .please-share").forEach((item) => item.fadeOut());
+  $("nav a.go-right").classList.remove('timer');
+  window.clearInterval(timer);
+
   $All('.content .page').forEach((item) => item.classList.remove('active'));
   if(page <= pages.length) $(`.content article:nth-of-type(${page+1})`).classList.add("active");
   if(page > 0) setNavTo(page);
+
 }
 
 //generate html structure
@@ -62,7 +83,7 @@ let nav = document.createElement('nav');
 nav.innerHTML = `
 <a class="go-left">None</a>
 <h2>Unnamed</h2>
-<a class="go-right">None</a>
+<a class="go-right">None</a><div class="after">${config.timer_time}</div>
 `
 document.body.appendChild(nav);
 
@@ -74,9 +95,9 @@ let social = document.createElement('div');
 social.className = "social";
 social.style.display = "none";
 social.innerHTML = `
-    <h6>Share</h6>
     <ul>
-          <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-heart"></i></a></li>
+          <li><h6>Share</h6></li>
+          <li><a href="#" class="icoHeart" title="Rss"><i class="fa fa-heart"></i></a></li>
           <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
           <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
@@ -98,13 +119,24 @@ function errorPage(message) {
 /* Scroll events */
 
 function checkScroll() {
+
     if((window.scrollY > config.text_at && $('.social').style.display == "none") || (window.scrollY > config.text_at && config.social == false)) {
         if(config.social == true)$('.social').fadeIn();
         $('nav').classList.add('scrolled');
     } else if((window.scrollY < config.text_at && $('.social').style.display == "block") || (window.scrollY < config.text_at && config.social == false)) {
         if(config.social == true) $('.social').fadeOut();
         $('nav').classList.remove('scrolled');
+        $All(".page .please-share").forEach((item) => item.fadeOut());
     }
+
+    if((window.scrollY+window.innerHeight > document.body.getBoundingClientRect().height - 100) && ($(".page .please-share").style.display == "none")) {
+        $All(".page .please-share").forEach((item) => item.fadeIn());
+        $("nav a.go-right").classList.add('timer');
+        window.clearInterval(timer);
+        if(config.timer) timer = setInterval(() => { countdown() }, 1000);
+        $('nav h2').innerHTML = `<strong>Następny:</strong> ${$('nav a.go-right').innerText}`;
+    }
+
 
 }
 

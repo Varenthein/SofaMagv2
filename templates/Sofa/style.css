@@ -5,6 +5,7 @@
   color: #333
 }
 
+
 /* HEADER */
 
 .page header {
@@ -27,7 +28,6 @@
   margin: 40px 0px 40px 0px;
   padding-bottom:20px;
   position: relative;
-  text-transform: capitalize;
   z-index: 2;
   border-bottom: 1px solid #fff;
 }
@@ -90,6 +90,7 @@
   font-size: 20px;
   margin: 0 auto;
   line-height: 1.58;
+  position: relative;
 }
 
 .page p {
@@ -98,6 +99,91 @@
 
 .page p strong {
   font-size: 21px;
+}
+
+.page .text h2:first-of-type {
+  margin-top:100px;
+  font-size: 35px;
+}
+
+.page h2 .romb {
+  width: 20px;
+  height: 35px;
+  padding-right: 15px;
+}
+
+/* INDEX */
+
+.page .index {
+  position:absolute;
+  left: 800px;
+  top: 0px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page .index a {
+  display: block;
+  width:100%;
+  border-bottom:1px solid #eee;
+  padding:10px 5px;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity .2s;
+  cursor: pointer;
+  color: inherit;
+}
+
+.page .index a:hover {
+  opacity: 1;
+}
+
+.page .index a::before {
+  content: "";
+  display: inline-block;
+  vertical-align:top;
+  width:10px;
+  height:10px;
+  border: 3px solid #eee;
+  border-radius: 100%;
+  margin: 2px 10px auto 0px
+}
+
+/* AUTHORS */
+
+.authors {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.authors .author {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  text-align:center;
+  margin: 20px 0px;
+}
+
+.authors .author img {
+  display: block;
+  margin: 10px auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #eee;
+  border-radius: 100%;
+}
+
+.authors .author h6 {
+  margin-bottom:5px;
+}
+
+.authors .author span {
+  font-size: 12px;
+  color: #5d6063;
+  line-height: auto;
+  display: block;
 }
 
 /* SOCIAL */
@@ -150,7 +236,7 @@
    opacity: 1;
 }
 
-.social a.icoRss:hover {
+.social a.icoHeart:hover {
 	color: #BD3518;
 }
 .social a.icoFacebook:hover {
@@ -169,6 +255,24 @@
 	color:#007bb7;
 }
 
+/* BLOCKQUOTES */
+
+blockquote {
+  border-left: 6px solid #5d6063;
+  font-style: italic;
+  font-size: 25px;
+  margin: 20px 0px 80px 50px;
+  padding-left: 20px;
+  position:relative;
+  /*#6d6d6d;*/
+}
+blockquote span.author {
+   bottom: -40px;
+   color: #6d6d6d;
+   font-size: 18px;
+   position: absolute;
+   right: 70px;
+}
 
 /* IMAGES */
 
@@ -197,6 +301,21 @@ figure figcaption span {
   color: #222;
 }
 
+/* Please share p */
+
+.page .please-share {
+    margin: 20px 0px;
+    padding: 20px 40px;
+    border-top: 1px solid #eee;
+    font-style:italic;
+    color: #6d6d6d;
+    font-size: 22px;
+    text-align: center;
+}
+.page .please-share span { margin:0px 5px; }
+
+
+
 /* ADDITIONAL ELEMENTS */
 .romb {
   background: #ff0;
@@ -208,4 +327,60 @@ figure figcaption span {
   top: 4px;
   z-index:0;
   -webkit-transform: skew(-10deg); -moz-transform: skew(-10deg); -o-transform: skew(-10deg);
+}
+
+/* FOR TABLET */
+
+@media (max-width: 1500px) {
+  .page .index {
+    position: static;
+    width: 100%;
+    margin-bottom:40px;
+  }
+
+  .page .index h3 {
+    margin: 20px 0px;
+  }
+
+}
+
+/* FOR MOBILE */
+
+@media (max-width: 769px) {
+
+  .page h1 {
+    text-align: center;
+    padding: 0px 20px;
+  }
+  .page p, .page h3, .page h2, .index  {
+    padding: 0px 20px;
+  }
+
+  .page h3 {
+    text-align: center;
+  }
+
+  /* social */
+  .social {
+    background: #fff;
+    top: inherit;
+    bottom: 0px;
+    left: 0px;
+    margin-left: 0px;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
+
+  .social ul {
+    flex-direction: row;
+  }
+
+  .social h6 {
+    display: inline-block;
+    height: 100%;
+    line-height: 60px;
+    vertical-align: bottom;
+    width: 100px;
+  }
+
 }

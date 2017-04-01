@@ -37,7 +37,18 @@ const page = function(title = "Untitled", author = "Unknown", category = "No cat
   <div class="text">
       <p><strong>${excerpt}</strong></p>
       ${text}
+      <p class="please-share" style="display: none">
+      <span class="fa fa-heart-o"></span>
+      Spodobał Ci się tekst? Udostępnij go na fb :)</p>
   </div>
   `;
+ }
+}
+
+//Standard page template
+const html_default = function(text) {
+
+  this.get = () => {
+  return text;
  }
 }
