@@ -91,7 +91,7 @@ let pages = [
     </a>
     </div>
 
-    <p class="please-share" style="display: none">
+    <p class="please-share" style="display: none;font-size: 8px;">
     Wszystkie teksty są własnością SofaSport.pl oraz ich autorów. Rozpowszechnianie ich poza formułą magazynu bez zgody ich twórców jest zabronione.  Zdjęcia użytew magazynie są wykorzystywanie na podstawie uznania autorstwa (Creative Commons 3.0 lub pokrewne).  Zdjęcię wykorzystane na okładce - By Kastom. (Own work.) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons.</p>
 
 
@@ -207,13 +207,24 @@ let pages = [
 <p>Starożytne Igrzyska, których początek datowany jest na rok 776 p.n.e. dały początek współczesnym zawodom sportowym. I, choć analogii z obecną rywalizacją jest sporo, to mityczne zmagania na Półwyspie Peloponeskim były jednak czymś więcej niż tylko walką o pokonanie rywali i zdobycie nagród materialnych. </p>
 <p>Zwycięzcy, czyli olimpionicy zdobywali wieczną chwałę. O szczególnym traktowaniu triumfatorów przekonał się w V wieku p.n.e. Dorieus z Rodos. Po trzykrotnym wygraniu pankrationu (starożytnej wersji dzisiejszego MMA) brał on udział w wojnie peloponeskiej przeciwko Atenom, podczas której trafił do niewoli. Gdy jego wrogowie dowiedzieli się, kto jest ich więźniem, błyskawicznie darowali mu wolność. Dorieus ostatecznie i tak został stracony – gdy Rodos stanęło po jednej stronie z Atenami w konflikcie ze Spartą, trzykrotny olimpionik został przechwycony i stracony przez wrogów, którzy nie szanowali pankrationu. Konkurencja kończyła się bowiem przez poddanie jednego z walczących, a Spartanie nie uznawali kapitulacji i otwarcie bojkotowali tę dyscyplinę sportu.  </p>
 <p>Zwycięzcy Igrzysk w ostatnim dniu trwania imprezy zyskiwali przywilej postawienia swojego posągu w gaju Zeuza – Altis. Początkowo pustawy ogród z biegiem czasu zapełniał się rzeźbami i świątyniami, wznoszonymi ku chwale największego z greckich Bogów. Tradycyjnie olimpionicy dekorowani byli wieńcem z gałązki świętej oliwki – rosnącej w gaju Altis i będącej, według opracowania Jana Parandowskiego, starym, zgrzybiałym drzewkiem, którego dwie gałęzie przypominały jednak muskularne ramiona atlety. </p>
+
 <p>Największym starożytnym mistrzem był Leonidas z Rodos. Wybitny biegacz, który wsławił się zdobyciem tytułu Triastes (zwycięstwo w trzech konkurencjach biegowych – stadion (192,8 m), diaulos (dystans dwóch stadionów) i hoplitodromos, czyli bieg w zbroi)  na 4 kolejnych Igrzyskach, w latach 164 – 152 p.n.e. Jego rekord, a więc 12 tytułów mistrza olimpijskiego, przetrwał ponad 2000 lat, a pobity został dopiero na ostatnich Igrzyskach w Rio de Janeiro przez Michaela Phelpsa. Wyczyny obu sportowców ciężko jest jednak porównywać. Liczba konkurencji, w których bierze udział obecnie Amerykanin, jest nieporównywalnie większa. Leonidas ostatnie laury zdobywał w wieku 36 lat, co, jak na tamte czasy, było nie lada osiągnięciem. Z drugiej strony, starożytne Igrzyska zrzeszały jedynie sportowców z greckich polis (miast-państw), natomiast obecnie jest to impreza globalna, a co za tym idzie,rywalizacja jest zdecydowanie trudniejsza. Nie umniejsza to jednak zasług Leonidasa z Rodos, który zdominował w swoim czasie sportowe zmagania . Współcześni mu ludzie uznali go za herosa, a jego rekord przetrwał wiele epok. </p>
 
 <h3>Tradycje i zwyczaje</h3>
 
 <p>Igrzyska były dla starożytnych Greków czasem wyjątkowym. Na miesiąc przed rozpoczęciem zmagań następował święty pokój (ekechejria) – na terenie całego kraju zaprzestawano wojen, by ludność mogła zjechać się do Olimpii, a sportowcy w spokoju mogli zakończyć przygotowania do rywalizacji. Zawodnicy swoje treningi rozpoczynali na 10 miesięcy przed startem Igrzysk, trenując w swoich rodzinnych miastach w specjalnych miejscach, zwanych gimnazjonami. Ostatni miesiąc przygotowań spędzali pod okiem hellanodików, czyli sędziów dbających o prawidłową organizację i przebieg zawodów. To oni na koniec podejmowali decyzję o dopuszczeniu sportowca do startu w Igrzyskach. Mężczyźni, mający wystartować w zawodach, składali, w obecności ojca i rodzeństwa, uroczystą przysięgę, w której zapewniali o sumiennym przygotowaniu do rywalizacji i deklarowali swoją uczciwość. W przypadku niedotrzymania obietnicy, zawodników spotykało potępienie poprzez postawienie pomnika hańby oraz nakładano na nich karę grzywny. </p>
+
+<figure class="img">
+  <img src="${issue.url}/img/olimpiada1.jpg" alt="">
+  <figcaption>Olimpia, grecja - to tu odbywały się pierwsze igrzyska<span>Drno [CC BY-SA 3.0])</span></figcaption>
+</figure>
+
 <p>Początkowo zawodnicy występowali z opaskami na biodrach, jednak po incydencie podczas 15. Igrzysk, gdy Orsippos z Megary lub, według innych źródeł, Akantos ze Sparty zgubił w trakcie biegu swoje odzienie i wpadł na linię mety w stroju Adama, podjęto decyzję, że od tej pory wszyscy sportowcy będą rywalizować nago, z wyjątkiem dwóch konkurencji – wyścigu rydwanów i wspomnianego wcześniej wyścigu w zbroi. Próżno jednak było szukać wśród widowni kobiet, mogących nacieszyć oko takim widokiem – płeć piękna nie miała wstępu na obiekty sportowe, a mężatki na czas Igrzysk zmuszone były do opuszczenia Olimpii. </p>
 <p>Czas trwania Igrzysk od zawsze symbolizował płonący znicz. W starożytności rozpalano go w świętym gaju przy pomocy promieni słonecznych, skupionych przez zwierciadło. Płonący ogień miał symbolizować prawdę, wiedzę, światło i czystość. W przeciwieństwie do obecnych zwyczajów, w starożytności rozpaleniu znicza nie towarzyszyły żadne huczne obrzędy. Sztafety z ogniem i uroczyste ceremonie są zjawiskiem stosunkowo nowym, zapoczątkowanym przy okazji Igrzysk w Berlinie w 1936 roku. </p>
+<figure class="img">
+  <img style="max-width:450px" src="${issue.url}/img/olimpiada2.jpg" alt="">
+  <figcaption>Olimpijski ogień towarzyszył igrzyskom of początku<span>Nationaal Archief Fotocollectie Anefo [CC BY-SA 3.0])</span></figcaption>
+</figure>
 <p>Starożytne Igrzyska nie były tak rozbudowane, jak obecne – początkowo trwały zaledwie jeden dzień. Z czasem ich formułę rozbudowano do 5 dni, gdzie pierwszy dzień poświęcony był na składanie przysięgi, a ostatni na nagradzanie zwycięzców i stawianie posągów. W środku rywalizacji był natomiast czas na ponowne składanie ofiar Zeusowi. Liczba konkurencji również była nieporównywalnie mniejsza do współczesnej. Poza wspomnianymi biegami, pankrationem i wyścigami rydwanów, rywalizowano również w skoku w dal, rzucie dyskiem i oszczepem, w zapasach oraz boksie. </p>
 
 <h3>Upadek Igrzysk</h3>
@@ -224,10 +235,20 @@ let pages = [
 <h3>Odrodzenie idei olimpijskiej</h3>
 
 <p>Idea organizowania Igrzysk zniknęła na ok. 15 stuleci. W roku 1896 w Atenach odrodziła się za sprawą Pierre'a de Coubertina – francuskiego barona, pomysłodawcy odbudowania ruchu olimpijskiego. Tradycyjnie, kolejne imprezy zaczęto organizować co 4 lata. Igrzyska nie były jednakże już tylko rozgrywką dla sportowców greckich. Do rywalizacji zaproszono wszystkie nacje, skupione wewnątrz nowo powstałego Międzynarodowego Komitetu Olimpijskiego, którego prezesem na długie lata został wybrany właśnie Pierre de Coubertin. Wedle jego założeń, sport miał nie tylko kształtować siłę fizyczną, ale miał również stać się przyczyną/ czynnikiem do zaszczepienia pokoju ducha i połączenia wielu narodów w duchu sportowej rywalizacji, czego dowodem stały się olimpijskie koła – symbol splecionych ze sobą pięciu kontynentów. Dowodem uznania dla tradycji był wybór stolicy Grecji jako pierwszego miasta – gospodarza nowożytnych Igrzysk. </p>
+
+<figure class="img">
+  <img src="${issue.url}/img/olimpiada3.jpg" alt="">
+  <figcaption>Zrekonstruowany stadion Panateński (Panathinaiko)</figcaption>
+</figure>
+
 <p>Główną areną zmagań został, odbudowany wielkim kosztem, historyczny Stadion Panateński (Panathinaiko) – obiekt w kształcie półelipsy, będący jedyną tego typu budowlą na świecie, w całości wykonaną z marmuru. Obecnie Panathinaiko jest nie tylko jedną z głównych atrakcji turystycznych Aten. Po kolejnych modernizacjach był m.in. areną zmagań łuczników przy okazji Igrzysk w 2004 r. Jest także symbolicznym miejscem, gdzie kończą się maratony. W 1896 r. zmagania sportowców na tym obiekcie śledziło na żywo ok. 80 tysięcy osób. Każdemu, kto chce na własnej skórze poczuć klimat antycznych zmagań, polecam stanąć na podium, na środku stadionu, i rozejrzeć się po marmurowych trybunach, kryjących tysiące lat historii sportu. </p>
 <h3>Nowe idee</h3>
 
 <p>W kolejnych latach po powstaniu nowożytnych Igrzysk, zaczęły kiełkować idee o powiększeniu ruchu olimpijskiego o dodatkowe gałęzie. Wzrastała nie tylko liczba konkurencji w trakcie letnich zmagań. Pojawił się pomysł organizowania zimowego odpowiednika tej rywalizacji. Odbyło się to po raz pierwszy w 1924 roku we francuskim Chamonix.  Lista rozegranych konkurencji początkowo nie była długa. Składały się na nią: narciarstwo klasyczne, łyżwiarstwo szybkie, łyżwiarstwo figurowe, hokej na lodzie, curling i bieg patroli wojskowych, będący odpowiednikiem dzisiejszego biathlonu. </p>
+<figure class="img">
+  <img src="${issue.url}/img/olimpiada4.jpg" alt="">
+  <figcaption>Olimpiada zimowa w 1928 roku (St. Moritz) <span>Bundesarchiv, Bild 102-05472 [CC-BY-SA 3.0]</span></figcaption>
+</figure>
 <p>Pomysł rozegrania kolejnych zawodów zrodził się w 1948 roku w głowach brytyjskich weteranów II wojny światowej, chcących zorganizować rywalizację dla osób niepełnosprawnych. Ich starania, pod przewodnictwem doktora Ludwika Guttmanna, doprowadziły wkrótce do powstania pierwszych Igrzysk Paraolimpijskich, które miały miejsce w 1960 roku w Rzymie. Z biegiem lat zyskiwały one na znaczeniu, aż w 1988 roku po raz pierwszy w historii zostały rozegrane na tych samych obiektach, co rywalizacja osób zdrowych. </p>
 
 <h3>Olimpijskie ideały współcześnie</h3>
@@ -236,6 +257,31 @@ let pages = [
 <p>Mimo tak wielu czynników, odbierających Igrzyskom Olimpijskim dawny etos i wyjątkowość, są one w dalszym ciągu traktowane jako wydarzenie szczególne w świecie sportu. Żadnej porażki zawodnicy nie przeżywają tak mocno, jak niepowodzenia z pięcioma kołami olimpijskimi w tle, a każdy wyjątek od reguły potwierdza, jak ważna jest to rywalizacja również dla kibiców. Wystarczyło, by Agnieszka Radwańska stwierdziła, że w zasadzie to turnieje Wielkoszlemowe są dla tenisistów ważniejsze, by w całej Polsce rozpętała się burza, a za zawodniczką te pochopne słowa będą się ciągnęły prawdopodobnie do końca kariery. Okazało się, że kibic jest w stanie wybaczyć sportowcowi niemal wszystko, ale nie zlekceważenie ideałów olimpijskich. </p>
 
           `).get()},
+
+  { "page": "3", "title": "Był idolem, został bandziorem", "content": new page("Był idolem, został bandziorem","Arek Warchał","Lekkoatletyka","pistorius.jpg", ["#Lekkoatletyka", "#Biegi"], "fot:  By Kastom - CC 3.0",
+  'Gwiazda lekkoatletyki, mógł wszystko i miał wszystko. Całe życie jeszcze przed nim. Kilkanaście, a może kilkadziesiąt tysięcy fanów, morze pieniędzy, dostatnie i luksusowe życie. A jednak został kryminalistą. To historia człowieka, który był symbolem walki o marzenia, a stał się mordercą. O kim mowa? Przestawiam Oscara Pistoriusa.',
+  `<p>Pistorius to południowoafrykański niepełnosprawny biegacz. Urodził się 22 listopada 1986 roku w Johannesburgu. Był uczestnikiem paraolimpiad, na których zdobył 6 złotych medali. Oscar w wyniku wad wrodzonych stracił obie nogi mając 11 miesięcy. Od zawsze interesował się sporem pomimo swojej dużej niepełnosprawności. Uprawiał między innymi rugby, tenis, boks czy zapasy. Jest rekordzistą świata w biegach na dystansie 100 m (10,91 s), 200 m (21,30 s) i 400 m (45,07 s). W 2007 roku jako pierwszy niepełnosprawny biegacz wystąpił ze sprawnymi zawodnikami. Nie chciano go dopuścić do IO w Pekinie, bo naukowcy powiedzieli, że jego protezy dają mu zbyt dużą przewagę nad innymi zawodnikami. Trybunał arbitrażowy przy MKOl w 2008 roku oświadczył, że "Biegający na protezach Oscar Pistorius może wystartować w igrzyskach olimpijskich w Pekinie". Po tym werdykcie zawodnik powiedział: "Popłakałem się. Ten dzień przejdzie do historii jako prawdziwe wyrównanie szans niepełnosprawnych ze zdrowymi". Jednak w tamtych igrzyskach nie wziął już udziału. W 2012 roku wystąpił na Igrzyskach Olimpijskich biegnąc na 400 m i w sztafecie reprezentacji swojego kraju 4x400 m.   </p>
+<blockquote>
+„Trybunał arbitrażowy przy MKOl w 2008 roku oświadczył, że biegający na protezach Oscar Pistorius może wystartować w igrzyskach olimpijskich w Pekinie. Po tym werdykcie zawodnik powiedział: Popłakałem się. Ten dzień przejdzie do historii jako prawdziwe wyrównanie szans niepełnosprawnych ze zdrowymi"
+</blockquote>
+
+<figure class="img">
+  <img src="${issue.url}/img/pistorious1.jpg" alt="">
+  <figcaption>Oscar Pistorious jako chorąży swojej reprezentacji (Paraolimpiada 2012) <span>Michael Greenwood [CC-BY-SA 2.0]</span></figcaption>
+</figure>
+
+<p>Jego życie zmieniło się 14 lutego 2013 roku. Wtedy właśnie został zatrzymany przez policję pod zarzutem zabójstwa swojej narzeczonej Revvy Steenkamp. Pistorius oświadczył, że wziął kobietę za włamywacza. Na początku faktycznie mogło się tak wydawać, bo w RPA skala przestępczości jest bardzo duża. Wszyscy współczuli Oscarowi. Jednak to zmieniło się, gdy policja przestawiła swoją, inną niż biegacza, wersję wydarzeń tego feralnego wieczoru. Stróże bezpieczeństwa poinformowali, że przed strzałami w domu sprintera toczyła się kłótnia między  nim a jego dziewczyną. Dodatkowo znaleziono zakrwawiony kij do krykieta. Z ustaleń wynikało, że Oscar pobił nim Revvę zanim zaczął do niej strzelać przez zamknięte drzwi do łazienki. Prokurator w akcie oskarżenia zarzucił zawodnikowi morderstwo z premedytacją, a do tego nielegalne posiadanie broni i amunicji. Żądał dla niego kary bezwzględnego dożywocia. Proces rozpoczął się wiosną 2014 roku, a skończył kilka miesięcy później w październiku. Wyrok skazywał Pistoriusa na pięć lat bezwzględnego więzienia plus trzy lata w zawieszeniu za posiadanie broni. Potem sąd przychylił się do wniosku prokuratora i uznał czyn za morderstwo z premedytacją. Wtedy Oscarowi groziło nawet 15 lat pozbawiania wolności. Tego oczekiwali wszyscy. Ostatecznie, po rozprawie w 2016 roku otrzymał tylko 6 lat więzienia. Podczas ostatniego posiedzenia biegacz próbował się bronić w każdy możliwy sposób. Desperacko próbował wzbudzić współczucie i litość sądu, dlatego zdjął protezy i szedł po sali sądowej bez nich. Chciał pokazać jaki jest bezbronny bez nich i że nie zabiłby z premedytacją własnej dziewczyny.</p>
+
+<figure class="img">
+  <img src="${issue.url}/img/pistorious2.jpg" alt="">
+  <figcaption>Sprawą szybko zainteresowały się media<span>The Mercury</span></figcaption>
+</figure>
+
+<p>Podczas odsiadywania wyroku w więzieniu stało się coś, czego nikt by się nie spodziewał. Sportowiec chciał popełnić samobójstwo. Na początku sierpnia 2016 roku trafił do szpitala w ranami ciętymi na obu nadgarstkach. Kierownictwo zakładu wyjaśniło, że biegacz doznał obrażeń po upadku z łóżka. Trochę mało wiarygodna wersja i nie wszyscy w nią uwierzyli. Informacje z nieoficjalnych źródeł jednoznacznie wskazywały, że była to próba samookaleczenia. Sam zawodnik zaprzecza temu, że próbował popełnić samobójstwo. </p>
+
+<p>W listopadzie 2016 roku Oscar Pistorius został przeniesiony do więzienia z udogodnieniami dla osób niepełnosprawnych. Tłumaczy się to tym, że biegacz ma szansę teraz uczestniczyć w zajęciach rehabilitacyjnych. Warte dodania jest to, że zawodnik sam wywalczył sobie pobyt w takim więzieniu. Przez lata starał się o to, żeby traktowano go na równi z zawodnikami pełnosprawnymi, a potem prosi o więzienie z udogodnieniami? Czemu znowu chce być osobą potrzebującą specjalnych warunków? Na te pytania niestety nie ma odpowiedzi.</p>
+
+<p>Myślę, że ta historia nie ma jeszcze swojego końca. Według wyroku Pistorius za dobre sprawowanie może wyjść po 3 latach odbytej kary, ale raczej już nigdy nikt nie okaże mu takiego szacunku jaki miał kiedyś. Od 14 lutego 2013 roku stał się mordercą, takim samym jak inni zbrodniarze. Historia Pistoriusa pokazała dobitnie, że na świecie nie ma idealnych osób. Ludzie, którzy czasem wydają nam się biedni, często wykorzystują naszą naiwność. Każdy człowiek ma uczucia. Każdy człowiek jest zdolny do kochania, ale także do odebrania życia innym. My, jako świadkowie procesu zawodnika, kiedyś zapomnimy, co miało miejsce w te tragiczne walentynki, ale Oscar już zawsze będzie pamiętał, co zrobił. Jego sumienie nie da mu zapomnieć, a wyrzuty sumienia będą go dręczyły przez cały czas.</p>`).get()},
 
 
 /*
@@ -339,7 +385,7 @@ let pages = [
     { "page": "13", "content": new page(13,`
       <p><strong>Koniec</strong></p>
 
-      <p>25 luty 1990, skocznia Vikersundbakken w Vikersund. Mistrzostwa Świata w Lotach. Matti Nykänen siedzi na belce, szykuje się do kolejnego skoku w zawodach. Jego forma  w tym sezonie nie mogła go zadowalać, ale teraz walczy o medal wielkiej imprezy. Jeszcze nie wie, że ostatni w swej karierze. Odbija się od belki, kilka chwil później jest już w powietrzu. Szybuje pięknie, starym stylem, którego był królem, idealnie ułożony w powietrzu. Jak to on. Ląduje na 160 metrze. Później okaże się, że ten skok daje mu srebrny medal.</p>
+      <p>25 luty 1990, skocznia „ w Vikersund. Mistrzostwa Świata w Lotach. Matti Nykänen siedzi na belce, szykuje się do kolejnego skoku w zawodach. Jego forma  w tym sezonie nie mogła go zadowalać, ale teraz walczy o medal wielkiej imprezy. Jeszcze nie wie, że ostatni w swej karierze. Odbija się od belki, kilka chwil później jest już w powietrzu. Szybuje pięknie, starym stylem, którego był królem, idealnie ułożony w powietrzu. Jak to on. Ląduje na 160 metrze. Później okaże się, że ten skok daje mu srebrny medal.</p>
 
       <p>Jak napisano, był to ostatni krążek wielkiej imprezy w bogatej karierze Fina. Czterokrotny mistrz olimpijski, pięciokrotny mistrz świata, czterokrotny zwycięzca Pucharu Świata, dwukrotny tryumfator Turnieju Czterech Skoczni… Nie było imprezy, na której Nykänen by nie dominował. Rok po srebrze zdobytym w Norwegii, Matti zdecydował się przejść na sportową emeryturę. W wieku zaledwie 27 lat. W skakaniu przeszkadzały mu chore plecy (później zoperowane), sportowe wypalenie, a także niechęć do przejścia na styl V.</p>
 
