@@ -93,6 +93,10 @@
   position: relative;
 }
 
+.page .text p a {
+  color: inherit;
+}
+
 .page p {
   margin: 40px 0px;
 }
@@ -348,9 +352,16 @@ figure figcaption span {
 
 @media (max-width: 769px) {
 
+  .page .text {
+    font-size: 16px;
+  }
+  .page .text p strong {
+    font-size: 18px;
+  }
   .page h1 {
     text-align: center;
     padding: 0px 20px;
+    font-size: 25px !important;
   }
   .page p, .page h3, .page h2, .index  {
     padding: 0px 20px;
@@ -359,6 +370,11 @@ figure figcaption span {
   .page h3 {
     text-align: center;
   }
+
+ figure figcaption {
+   font-size: 16px;
+   width: 100%;
+ }
 
   /* social */
   .social {
@@ -382,5 +398,28 @@ figure figcaption span {
     vertical-align: bottom;
     width: 100px;
   }
+  .page .please-share {
+    font-size: 10px;
+  }
 
+  .tags {
+    display: none;
+  }
+
+  /* Blockquote */
+   blockquote {
+     font-size: 16px;
+     margin: 20px 20px 60px 20px;
+
+   }
+
+    blockquote span.author {
+      font-size: 12px;
+      right: 0px;
+    }
+
+    /* authors */
+    .authors .author {
+      width: 135px;
+    }
 }

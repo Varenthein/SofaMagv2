@@ -41,7 +41,8 @@ Element.prototype.fadeOut = function(callbackF) {
 /* WINDOW */
 
 Window.prototype.scrollIt = function(to,speed) {
-function adjust() { this.pageXOffset = to; }
+//this.scroll(to,0);
+function adjust() { this.scroll(to,0); }
 if(this.pageXOffset < to) (move = () => { if((this.pageXOffset+=10)<=to+10) { this.scroll(this.pageXOffset,0); setTimeout(move,speed); } else setTimeout(adjust, speed+1)})();
 else (move = () => { if((this.pageXOffset-=10)>=to+10) { this.scroll(this.pageXOffset,0); setTimeout(move,speed); } else setTimeout(adjust, speed+1)})();
 }

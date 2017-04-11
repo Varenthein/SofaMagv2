@@ -15,6 +15,7 @@
 
 config.social = true; //show social buttons
 config.text_at = window.innerHeight; //determine where actual text starts
+config.timer = false;
 
 //--config end
 
